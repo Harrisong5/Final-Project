@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-harrisong5-finalproject-7oi3citids6.ws.codeinstitute-ide.net', 
+ALLOWED_HOSTS = ['8000-harrisong5-finalproject-14dwxlo3xn3.ws.codeinstitute-ide.net', 
 '.herokuapp.com']
 
 
@@ -85,7 +85,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-harrisong5-finalproject-7oi3citids6.ws.codeinstitute-ide.net", 
+    "https://8000-harrisong5-finalproject-14dwxlo3xn3.ws.codeinstitute-ide.net", 
     "https://*.herokuapp.com"
 ]
 
