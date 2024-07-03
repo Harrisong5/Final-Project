@@ -6,5 +6,6 @@ from .models import Post, Comment
 posts = Post.objects.all().order_by('-date')
 comments = Comment.objects.all().order_by('-post')
 class PostList(generic.ListView):
-    model = Post
+    queryset = Post.objects.all()
+    template_name = "post_list.html"
     
