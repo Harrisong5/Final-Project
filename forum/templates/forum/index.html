@@ -14,29 +14,29 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
+
+                                    <p class="author">{{ post.author }}</p>
+
                             </div>
                             <a href="#" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
-
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.date}}
-                            </p>
-                        </div>
-                        <h2>Comments</h2>
+                            <p class="card-content">{{post.content}}</p>
+                            <p class="card-date">{{ post.date}}</p>
+                            <hr>
+                         <h2 class="comments-header">Comments</h2>
                         <ul>
                             {% for comment in comments %}
                             <li>
-                                <p>{{ comment.commentBody }}</p>
+                                <p class="comments-body">{{ comment.commentBody }}</p>
                                 <p>By {{ comment.commentAuthor }} on {{ comment.commentDate }}</p>
                             </li>
                             {% empty %}
-                            <li>No comments yet.</li>
+                            <li class="comments-body">No comments yet.</li>
                             {% endfor %}
-                        </ul>
+                        </ul>   
+                        </div>
+                        
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}

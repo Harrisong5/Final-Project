@@ -1,8 +1,10 @@
 body {
     background-color: #A5C77D;
 }
-p {
+p, h1, h2, h3, h4, h5, h6 {
     font-family: Dosis, sans-serif;
+}
+p {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -14,7 +16,7 @@ p {
     color: #AC3448
 }
 .logo {
-    padding-top: 1rem;
+   align-self: center;
 }
 .light-bg {
     background-color: white;
@@ -38,7 +40,9 @@ p {
 }
 
 .card {
-    border: none;
+    border-style: solid;
+    border-color: #2F3702;
+    border-width: 0.2rem;
     background-color: transparent;
 }
 
@@ -50,8 +54,7 @@ p {
     position: absolute;
     bottom: 5%;
     min-width: 30%;
-    left: -2px;
-    background-color: #7B1F4D;
+    padding-top: 5%;
 }
 
 .scale {
@@ -61,10 +64,41 @@ p {
 
 .author {
     color: #A5C77D;
-    margin: 4px;
-    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
-
+.card-title {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.card-content {
+    color: #AE5985;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.card-date {
+    color: #AC3448;
+    font-weight: bold;
+    font-size: 1rem;
+}
+hr {
+    color: #2F3702;
+}
+.comments-header {
+    color: #2F3702;
+    font-size: 1.8rem;
+}
+.comments-body {
+    font-family: Dosis, sans-serif;
+    color: #AE5985;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.comments-author{
+    color: #A5C77D;
+    font-size: 1.6rem;
+}
 .masthead {
     margin-top: 10px;
     overflow: hidden;
