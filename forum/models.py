@@ -26,7 +26,7 @@ class JoinComm(models.Model):
 
 class Post(models.Model):
     postID = models.AutoField(primary_key=True)
-    community = models.ForeignKey(Community, on_delete=models.CASCADE, related_name="post_comm")
+    community = models.ForeignKey(Community, on_delete=models.CASCADE, related_name="post_community")
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     content = models.TextField()
@@ -37,7 +37,6 @@ class Post(models.Model):
     )
     date = models.DateTimeField(auto_now_add=True)
     votes = models.ManyToManyField(User, related_name="votes")
-    comments = models.IntegerField(null=True, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
@@ -48,5 +47,12 @@ class Post(models.Model):
             self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
-class User(models.Model):
-    user_id = models.AutoField(primary_key=True)
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comment_post")
+    commentAuthor = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comment_author")
+    commentBody = models.TextField(max_length=10000, null=True, blank=True)
+    commentVote = models.ManyToManyField(User, related_name="comment_vote")
+    commentDate = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return self.commentBody
