@@ -20,6 +20,20 @@ class Post(models.Model):
             self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
+class Community(models.Model):
+    commUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="forum_communities")
+    commTitle = models.CharField(max_length=200)
+    commURL = models.CharField(max_length=500, null=True, blank=True)
+    commImg = models.ImageField(max_length=2000, null=True, blank=True)
+    commImglink = models.CharField(max_length=500, null=True, blank=True)
+    commDesc = models.TextField(max_length=1000, null=True, blank=True)
+    commDate = models.DateTimeField(null=True, blank=True)
+    
+    def __str__(self):
+        return self.commTitle
+
+
+
 class Sub(models.Model):
     sub_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200, unique=True)
