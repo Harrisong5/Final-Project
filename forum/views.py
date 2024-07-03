@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
 from .models import Post, Comment
 
 # Create your views here.
 posts = Post.objects.all().order_by('-date')
-comments = Comment.objects.all()
-
-def my_forum(request):
-    return HttpResponse(comments)
-
+comments = Comment.objects.all().order_by('-post')
+class PostList(generic.ListView):
+    model = Post
     
