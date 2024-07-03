@@ -1,32 +1,40 @@
 body {
     background-color: #A5C77D;
 }
-
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+p {
+    font-family: Dosis, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
-
-.red-o {
-    color: #E84610;
+/* Navbar */
+.logo {
+    font-family: Dosis, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #AC3448
 }
-
-.thin {
-    font-weight: 300;
+.logo {
+    padding-top: 1rem;
 }
-
 .light-bg {
-    background-color: #A5C77D;
+    background-color: white;
+}
+.text-light {
+
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #2F3702;
+}
+.text-dark {
+    color: #2F3702;
 }
 
 .main-bg {
-    background-color: #AE5985;
+    background-color: #7B1F4D;
+}
+.text-main {
+    
 }
 
 .card {
@@ -130,19 +138,19 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #7B1F4D;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #7B1F4D;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #7B1F4D;
     background: transparent;
     border: none;
 }
