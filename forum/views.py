@@ -8,4 +8,4 @@ comments = Comment.objects.all().order_by('-post')
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "post_list.html"
-    
+

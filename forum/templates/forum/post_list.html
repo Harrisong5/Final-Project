@@ -13,7 +13,22 @@
     {% for post in object_list %}
     <h2>{{post.title}}</h2>
     <p>{{post.content}}</p>
+    <p>post id: {{post.postID}}</p>
+    <p>community: {{post.community}}</p>
+    <p>{{post.date}}</p>
+    <p>upvotes: {{post.votes}}</p>
     <p>Author: {{post.author}}</p>
+    <h2>Comments</h2>
+    <ul>
+        {% for comment in comments %}
+        <li>
+            <p>{{ comment.commentBody }}</p>
+            <p>By {{ comment.commentAuthor }} on {{ comment.commentDate }}</p>
+        </li>
+        {% empty %}
+        <li>No comments yet.</li>
+        {% endfor %}
+    </ul>
     {% endfor %}
 </body>
 
