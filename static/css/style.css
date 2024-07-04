@@ -94,22 +94,26 @@ ul {
 
 }
 .comments-list {
-    background-color: antiquewhite;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 .comments-body {
     font-family: Dosis, sans-serif;
     color: #AE5985;
     font-size: 1.2rem;
     font-weight: 400;
+    margin-bottom: 1rem;
 }
 .comments-author{
     color: #A5C77D;
     font-size: 1.4rem;
+    margin-bottom: 0;
 }
 .comments-date{
     color: #AC3448;
     font-weight: bold;
     font-size: 0.8rem;
+    margin-bottom: 0.5rem;
     
 }
 

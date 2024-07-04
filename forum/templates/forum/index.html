@@ -26,13 +26,16 @@
                             <p class="card-date">{{ post.date}}</p>
                             <hr>
                          <h2 class="comments-header">Comments</h2>
+                        
                         <ul>
                             {% for comment in post.comments.all %}
-                            <li>
-                                <p class="comments-body">{{ comment.commentBody }}</p>
+                            <div class="comments-list">
+                                <li>
                                 <p class="comments-author">{{ comment.commentAuthor }}</p>
                                 <p class="comments-date">{{ comment.commentDate }}</p>
-                            </li>
+                                <p class="comments-body">{{ comment.commentBody }}</p>
+                                </li>
+                            </div>
                             {% empty %}
                             <li class="comments-body">No comments yet.</li>
                             {% endfor %}
