@@ -48,7 +48,7 @@ class Post(models.Model):
         super(Post, self).save(*args, **kwargs)
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comment_post")
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     commentAuthor = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comment_author")
     commentBody = models.TextField(max_length=10000, null=True, blank=True)
     commentVote = models.ManyToManyField(User, related_name="comment_vote")

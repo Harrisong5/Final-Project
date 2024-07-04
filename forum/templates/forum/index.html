@@ -27,7 +27,7 @@
                             <hr>
                          <h2 class="comments-header">Comments</h2>
                         <ul>
-                            {% for comment in comments %}
+                            {% for comment in post.comments.all %}
                             <li>
                                 <p class="comments-body">{{ comment.commentBody }}</p>
                                 <p class="comments-author">By {{ comment.commentAuthor }} on {{ comment.commentDate }}</p>
