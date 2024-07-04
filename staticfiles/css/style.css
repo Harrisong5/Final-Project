@@ -1,0 +1,275 @@
+body {
+    background-color: #A5C77D;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: Dosis, sans-serif;
+}
+/* Navbar */
+.navbar-brand {
+    align-content: center;
+    
+}
+.logo {
+    font-family: Dosis, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 10rem;
+    justify-self: center;
+    position: relative;
+    top: 0.6rem;
+}
+.light-bg {
+    background-color: white;
+}
+.text-light {
+
+}
+
+.dark-bg {
+    background-color: #2F3702;
+}
+.text-dark {
+    color: #2F3702;
+}
+
+.main-bg {
+    background-color: #7B1F4D;
+}
+.text-main {
+    
+}
+/* Sidebar*/
+.sidebar-col {
+    background-color: #7B1F4D;
+    padding: 0;
+}
+.sidebar > h1 {
+    color: #AE5985;
+    font-size: 2.6vw;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+}
+
+.posts-block {
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+.card {
+    border-style: solid;
+    border-color: #2F3702;
+    border-width: 0.2rem;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    padding-top: 5%;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: #A5C77D;
+    font-size: 6vw;
+    font-weight: 500;
+}
+.card-title {
+    color: white;
+    font-size: 7vw;
+    font-weight: 600;
+}
+.card-content {
+    color: #AE5985;
+    font-size: 5vw;
+    font-weight: 400;
+}
+.card-date {
+    color: #AC3448;
+    font-weight: bold;
+    font-size: 3.6vw;
+}
+hr {
+    color: #2F3702;
+}
+.comments-header {
+    color: #2F3702;
+    font-size: 6vw;
+}
+ul {
+    list-style-type: none;
+
+}
+.comments-list {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.comments-body {
+    font-family: Dosis, sans-serif;
+    color: #AE5985;
+    font-size: 4.4vw;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.comments-author{
+    color: #A5C77D;
+    font-size: 5vw;
+    margin-bottom: 0;
+}
+.comments-date{
+    color: #AC3448;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-bottom: 0.5rem;
+    
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #2F3702;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #2F3702;
+}
+
+.post-link:hover,
+.page-link {
+    color: white;
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #188181;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #7B1F4D;
+    border: none;
+    background: transparent;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #7B1F4D;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #7B1F4D;
+    background: transparent;
+    border: none;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+.approval {
+    color: rgb(222, 146, 168);
+}
+
+@media only screen and (min-width: 768px) {
+    /* Sidebar*/
+.sidebar > h1 {
+    font-size: 1.2rem;
+}
+
+.author {
+    font-size: 2.4rem;
+}
+.card-title {
+    font-size: 2.8rem;
+}
+.card-content {
+    font-size: 2rem;
+}
+.card-date {
+    font-size: 1.2rem;
+}
+
+.comments-header {
+    font-size: 2.4rem;
+}
+
+.comments-list {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.comments-body {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.comments-author{
+    font-size: 2rem;
+}
+.comments-date{
+    font-size: 1rem;
+    
+}
+}
