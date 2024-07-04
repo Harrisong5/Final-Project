@@ -57,14 +57,26 @@
             </div>
         </div>
     </nav>
-
-    <main class="flex-shrink-0 main-bg">
-
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-
-    </main>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-2 sidebar-col">
+                <div class="sidebar">
+                    <h1>All</h1>
+                    <h1>News</h1>
+                    <h1>Communities</h1>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-10" style="padding-left: 0px; padding-right: 0px;">
+                <main class="flex-shrink-0 main-bg">
+                    {% block content %}
+                    <!-- Content goes here -->
+                    {% endblock content %}
+                </main>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 light-bg">

@@ -39,8 +39,11 @@ p {
     
 }
 /* Sidebar*/
+.sidebar-col {
+    background-color: white;
+}
 .sidebar > h1 {
-    color: #23BBBB;
+    color: #2F3702;
     font-size: 1.2rem;
     text-align: center;
     padding: 0;
@@ -49,7 +52,9 @@ p {
     margin-left: 0.4rem;
     margin-right: 0.4rem;
 }
-
+.main-content {
+    padding-left: 0;
+}
 
 .posts-block {
     padding-left: 0.8rem;
