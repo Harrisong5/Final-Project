@@ -5,17 +5,19 @@ p, h1, h2, h3, h4, h5, h6 {
     font-family: Dosis, sans-serif;
 }
 /* Navbar */
-.navbar {
+.navbar-brand {
+    align-content: center;
     
 }
 .logo {
     font-family: Dosis, sans-serif;
     font-size: 2rem;
     font-weight: 800;
-    color: white
-}
-.logo {
-   align-self: center;
+    color: white;
+    margin-top: 10rem;
+    justify-self: center;
+    position: relative;
+    top: 0.6rem;
 }
 .light-bg {
     background-color: white;
@@ -47,13 +49,14 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 2.6vw;
     font-weight: bold;
     text-align: center;
-    padding-left: 0.7rem;
     margin-top: 3vh;
     margin-bottom: 4vh;
+    margin-left: 2vw;
 }
 
 .posts-block {
-    padding: 0;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 .card {
     border-style: solid;
