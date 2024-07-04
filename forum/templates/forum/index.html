@@ -30,7 +30,8 @@
                             {% for comment in post.comments.all %}
                             <li>
                                 <p class="comments-body">{{ comment.commentBody }}</p>
-                                <p class="comments-author">By {{ comment.commentAuthor }} on {{ comment.commentDate }}</p>
+                                <p class="comments-author">{{ comment.commentAuthor }}</p>
+                                <p class="comments-date">{{ comment.commentDate }}</p>
                             </li>
                             {% empty %}
                             <li class="comments-body">No comments yet.</li>

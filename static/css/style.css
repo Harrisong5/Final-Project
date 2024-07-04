@@ -89,6 +89,13 @@ hr {
     color: #2F3702;
     font-size: 1.8rem;
 }
+ul {
+    list-style-type: none;
+
+}
+.comments-list {
+    background-color: antiquewhite;
+}
 .comments-body {
     font-family: Dosis, sans-serif;
     color: #AE5985;
@@ -97,8 +104,15 @@ hr {
 }
 .comments-author{
     color: #A5C77D;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
+.comments-date{
+    color: #AC3448;
+    font-weight: bold;
+    font-size: 0.8rem;
+    
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
