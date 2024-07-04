@@ -43,10 +43,8 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 2.6vw;
     text-align: center;
     padding: 0;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
 }
 .posts-block {
     padding-left: 0.8rem;
@@ -226,4 +224,100 @@ ul {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+@media only screen and (min-width: 768px) {
+    /* Sidebar*/
+.sidebar-col {
+    background-color: white;
+}
+.sidebar > h1 {
+    color: #2F3702;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.posts-block {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+.card {
+    border-style: solid;
+    border-color: #2F3702;
+    border-width: 0.2rem;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    padding-top: 5%;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: #A5C77D;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+.card-title {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.card-content {
+    color: #AE5985;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.card-date {
+    color: #AC3448;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+hr {
+    color: #2F3702;
+}
+.comments-header {
+    color: #2F3702;
+    font-size: 2.4rem;
+}
+ul {
+    list-style-type: none;
+
+}
+.comments-list {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.comments-body {
+    font-family: Dosis, sans-serif;
+    color: #AE5985;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.comments-author{
+    color: #A5C77D;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+.comments-date{
+    color: #AC3448;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    
+}
 }
