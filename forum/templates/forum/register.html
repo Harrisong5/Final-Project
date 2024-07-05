@@ -1,8 +1,15 @@
-<html>
+{% extends "base.html" %}
+
+{% block content %}
+
     <p>register here</p>
 
     <form method="POST" autocomplete="off">
 
-        {csrf_token %}
+        {% csrf_token %}
+
+        {{registerform.as_p}}
+
+        <input type="submit" value="register"/>
     </form>
-</html>
+{% endblock %}
