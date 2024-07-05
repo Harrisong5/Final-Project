@@ -4,6 +4,7 @@ from .models import Post, Comment
 from . forms import CreateUserForm, LoginForm
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
 # Create your views here.
@@ -63,6 +64,7 @@ def logout(request):
 
     return redirect('forum')
 
+@login_required(login_url="my_login")
 def dashboard(request):
 
     return render (request, 'forum/dashboard.html')
