@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <p>log in </p>
+
+    <form method="POST" autocomplete="off">
+
+        {% csrf_token %}
+
+        {{loginform.as_p}}
+
+        <input type="submit" value="login"/>
+    </form>
+{% endblock %}
