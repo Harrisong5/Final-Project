@@ -53,7 +53,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 4vh;
     margin-left: 2vw;
 }
-
+/* posts section */
 .posts-block {
     padding-left: 6vw;
     padding-right: 6vw;
@@ -135,7 +135,12 @@ ul {
     margin-bottom: 0.5rem;
     
 }
+/* forms */
+#id-username {
+    font-family: Dosis, sans-serif;
+    color: #AE5985;
 
+}
 .masthead {
     margin-top: 10px;
     overflow: hidden;

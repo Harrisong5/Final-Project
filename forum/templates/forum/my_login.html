@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-    <p>log in </p>
-
+<div class="row form">
     <form method="POST" autocomplete="off">
-
         {% csrf_token %}
-
-        {{loginform.as_p}}
-
-        <input type="submit" value="login"/>
+        <div class="form-group">
+            <label for="{{ loginform.username.id_for_label }}">Username</label>
+            {{ loginform.username }}
+            {{ loginform.username.errors }}
+        </div>
+        <div class="form-group">
+            <label for="{{ loginform.password.id_for_label }}">Password</label>
+            {{ loginform.password }}
+            {{ loginform.password.errors }}
+        </div>
+        <input type="submit" value="Login" class="btn btn-primary" />
     </form>
+</div>
 {% endblock %}

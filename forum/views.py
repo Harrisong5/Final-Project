@@ -28,6 +28,9 @@ def register(request):
             form.save()
 
             return redirect('my_login')
+    else:
+        form = CreateUserForm()
+    return render(request, 'forum/register.html', {'registerform': form})
 
     context = {'registerform':form}
 
@@ -52,7 +55,16 @@ def my_login(request):
 
                 auth.login(request, user)
 
-                return redirect("dashboard")
+                return redirect('dashboard')
+            else:
+                # Invalid username or password.
+                pass
+        else:
+            # Form is invalid.
+            pass          
+    else:
+        form = LoginForm()
+    return render(request, 'forum/my_login.html', {'loginform': form})
 
     context = {'loginform':form}
 

@@ -2,14 +2,31 @@
 
 {% block content %}
 
-    <p>register here</p>
-
+<div class="row form">
     <form method="POST" autocomplete="off">
-
         {% csrf_token %}
-
-        {{registerform.as_p}}
-
-        <input type="submit" value="register"/>
+        <div class="form-group">
+            <label for="{{ registerform.username.id_for_label }}">Username</label>
+            {{ registerform.username }}
+            {{ registerform.username.errors }}
+        </div>
+        <div class="form-group">
+            <label for="{{ registerform.email.id_for_label }}">Email</label>
+            {{ registerform.email }}
+            {{ registerform.email.errors }}
+        </div>
+        <div class="form-group">
+            <label for="{{ registerform.password1.id_for_label }}">Password</label>
+            {{ registerform.password1 }}
+            {{ registerform.password1.errors }}
+        </div>
+        <div class="form-group">
+            <label for="{{ registerform.password2.id_for_label }}">Confirm Password</label>
+            {{ registerform.password2 }}
+            {{ registerform.password2.errors }}
+        </div>
+        <input type="submit" value="Register" class="btn btn-primary" />
     </form>
+</div>
+
 {% endblock %}
