@@ -57,6 +57,12 @@ def my_login(request):
 
     return render (request, 'forum/my_login.html', context=context)
 
+def logout(request):
+
+    auth.logout(request)
+
+    return redirect('forum')
+
 def dashboard(request):
 
-    return HttpResponse("dashboard")
+    return render (request, 'forum/dashboard.html')
