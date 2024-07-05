@@ -136,10 +136,8 @@ ul {
     
 }
 /* forms */
-#id-username {
-    font-family: Dosis, sans-serif;
-    color: #AE5985;
-
+.form {
+    justify-items: center;
 }
 .masthead {
     margin-top: 10px;
