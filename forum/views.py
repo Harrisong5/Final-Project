@@ -24,7 +24,7 @@ def register(request):
 
             form.save()
 
-            return redierct('forum/index.html')
+            return redirect('forum')
 
     context = {'registerform':form}
 
