@@ -2,19 +2,19 @@
 
 {% block content %}
 <div class="row form">
-    <form method="POST" autocomplete="off">
+    <form method="POST" autocomplete="off" style="text-align: center;">
         {% csrf_token %}
-        <div class="form-group">
-            <label for="{{ loginform.username.id_for_label }}">Username</label>
+        <div class="form-group" >
+            <label for="{{ loginform.username.id_for_label }}"><h3 class="form-label" style="color:white;">Username:</h3></label>
             {{ loginform.username }}
             {{ loginform.username.errors }}
         </div>
         <div class="form-group">
-            <label for="{{ loginform.password.id_for_label }}">Password</label>
+            <label for="{{ loginform.password.id_for_label }}"><h3 class="form-label" style="color:white;">Password:</h3></label>
             {{ loginform.password }}
             {{ loginform.password.errors }}
         </div>
-        <input type="submit" value="Login" class="btn btn-primary" />
+        <input type="submit" value="Login" class="btn btn-primary" style="background-color: #A5C77D;" />
     </form>
 </div>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="row form">
-    <form method="POST" autocomplete="off" style="text-align: right; position: relative; right: 33vw;">
+    <form method="POST" autocomplete="off" style="text-align: center; ">
         {% csrf_token %}
         <div class="form-group">
             <label for="{{ registerform.username.id_for_label }}"><h3 class="form-label" style="color:white;">Username:</h3></label>
@@ -25,7 +25,7 @@
             {{ registerform.password2 }}
             {{ registerform.password2.errors }}
         </div>
-        <input type="submit" value="Register" class="btn btn-primary" style="position: relative; right: 14vw;"/>
+        <input type="submit" value="Register" class="btn btn-primary" style="background-color: #A5C77D; border: none;"/>
     </form>
 </div>
 

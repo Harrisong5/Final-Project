@@ -136,8 +136,9 @@ ul {
     
 }
 /* forms */
-.form {
-    justify-items: center;
+
+.btn {
+   
 }
 .masthead {
     margin-top: 10px;
@@ -190,8 +191,8 @@ ul {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
-    color: #fff;
+    background-color: #A5C77D;
+    color: #7B1F4D;
 }
 
 .btn-signup:hover,
