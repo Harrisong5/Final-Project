@@ -88,4 +88,9 @@ def dashboard(request):
     current_user = request.user
     posts = Post.objects.filter(author=current_user)
 
-    return render (request, 'forum/dashboard.html', {'posts': posts})
+    context = {
+        'current_user': current_user,
+        'posts': posts,
+    }
+
+    return render(request, 'forum/dashboard.html', context)

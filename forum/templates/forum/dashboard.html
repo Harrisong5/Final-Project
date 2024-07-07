@@ -4,7 +4,13 @@
 
     <p>dashboard</p>
     <p>posts</p>
-        <ul>
+        
+        <div class="col-md-12 posts-block">
+            <div class="col-md-10 offset-md-1 mb-4">
+                    <p class="author">Posts by {{ user }}</p>
+                    
+            </div>
+        </div>
         {% for post in posts %}
             <li>
                 <div class="col-md-12 posts-block">
