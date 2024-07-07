@@ -3,7 +3,20 @@
 {% block content %}
 
     <p>dashboard</p>
-    <p>posts</p>    
+    <p>posts</p>
+        <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+                by {{ post.author }} on {{ post.date }}
+            </li>
+        {% empty %}
+            <li>No posts available.</li>
+        {% endfor %}
+        </ul>
+
 
     <a href="{% url 'logout' %}">logout here</a>
+
+
 {% endblock %}

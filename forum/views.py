@@ -82,7 +82,10 @@ def logout(request):
 
     return redirect('forum')
 
-@login_required(login_url="my_login")
+@login_required(login_url="login")
 def dashboard(request):
 
-    return render (request, 'forum/dashboard.html')
+    current_user = request.user
+    posts = Post.objects.filter(author=current_user)
+
+    return render (request, 'forum/dashboard.html', {'posts': posts})
