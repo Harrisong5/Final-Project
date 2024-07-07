@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -21,9 +22,10 @@
                             </div>
                             <a href="#" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
+                                <a href="{% url 'post_detail' post.pk %}">more details</a>
                                 <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
                             </a>
-                            <p class="card-content">{{post.content}}</p>
+                            <p class="card-content">{{ post.content }}</p>
                             <p class="card-date">{{ post.date}}</p>
                             <hr>
                          <h2 class="comments-header">Comments</h2>

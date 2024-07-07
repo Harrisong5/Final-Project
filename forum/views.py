@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Post, Comment
 from . forms import CreateUserForm, LoginForm
@@ -35,6 +35,12 @@ def register(request):
     context = {'registerform':form}
 
     return render (request, 'forum/register.html', context=context)
+
+def post_detail(request, pk):
+    
+    post = get_object_or_404(Post, pk=pk)
+
+    return render(request, 'forum/post_detail.html', {'post': post})
 
 def my_login(request):
 
