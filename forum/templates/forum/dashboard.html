@@ -3,16 +3,14 @@
 {% block content %}
 
     <p>dashboard</p>
-    <p>posts</p>
         
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
-                    <p class="author">Posts by {{ user }}</p>
+                    <p class="author">Posts by {{ current_user }}</p>
                     
             </div>
         </div>
         {% for post in posts %}
-            <li>
                 <div class="col-md-12 posts-block">
                     <div class="card col-md-10 offset-md-1 mb-4">
                         <div class="card-body">
@@ -43,7 +41,6 @@
                         
                     </div>
                 </div>
-            </li>
         {% empty %}
             <li>No posts available.</li>
         {% endfor %}
