@@ -11,6 +11,7 @@
         <!-- Forum Posts Column -->
         <div class="mt-3 left">
             <div class="row">
+                
                 {% for post in post_list %}
                 <div class="col-md-12 posts-block">
                     <div class="card col-md-10 offset-md-1 mb-4">
@@ -21,8 +22,7 @@
 
                             </div>
                             <a href="#" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <a href="{% url 'post_detail' post.pk %}">more details</a>
+                                <a href="{% url 'post_detail' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
                                 <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
                             </a>
                             <p class="card-content">{{ post.content }}</p>

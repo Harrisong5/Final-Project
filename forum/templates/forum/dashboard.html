@@ -7,8 +7,36 @@
         <ul>
         {% for post in posts %}
             <li>
-                <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
-                by {{ post.author }} on {{ post.date }}
+                <div class="col-md-12 posts-block">
+                    <div class="card col-md-10 offset-md-1 mb-4">
+                        <div class="card-body">
+                            <a href="#" class="post-link">
+                                
+                                <a href="{% url 'post_detail' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
+                                <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
+                            </a>
+                            <p class="card-content">{{ post.content }}</p>
+                            <p class="card-date">{{ post.date}}</p>
+                            <hr>
+                         <h2 class="comments-header">Comments</h2>
+                        
+                        <ul>
+                            {% for comment in post.comments.all %}
+                            <div class="comments-list">
+                                <li>
+                                <p class="comments-author">{{ comment.commentAuthor }}</p>
+                                <p class="comments-date">{{ comment.commentDate }}</p>
+                                <p class="comments-body">{{ comment.commentBody }}</p>
+                                </li>
+                            </div>
+                            {% empty %}
+                            <li class="comments-body">No comments yet.</li>
+                            {% endfor %}
+                        </ul>   
+                        </div>
+                        
+                    </div>
+                </div>
             </li>
         {% empty %}
             <li>No posts available.</li>
