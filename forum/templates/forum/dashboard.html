@@ -2,10 +2,20 @@
 
 {% block content %}
 
-    <p>{{ email }}</p>
-    <p>{{ password }}</p>
-    <a href="{% url 'change_password' %}"><button class="btn"><h2>Change password</h2></button></a>
-    <button class="btn"><h2>Edit profile</h2></button>
+
+    <div class="row text-center dashboardcontrols">
+        <div class="col-4 aligncenter nopad dashboard">
+            <button class="btn dashboardbtn"><h2>Edit profile</h2></button>
+        </div>
+        <div class="col-4 aligncenter nopad dashboard">
+            <a href="{% url 'change_password' %}"><button class="btn dashboardbtn"><h2>Change password</h2></button></a>
+        </div>
+        <div class="col-4 aligncenter nopad dashboard">
+            <a href="{% url 'logout' %}"><button class="btn dashboardbtn"><h2>Logout</h2></button></a>
+        </div>
+
+        
+    </div>
         
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
@@ -42,7 +52,7 @@
         </ul>
 
 
-    <a href="{% url 'logout' %}">logout here</a>
+    
 
 
 {% endblock %}

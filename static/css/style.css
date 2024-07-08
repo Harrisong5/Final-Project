@@ -1,8 +1,16 @@
 body {
     background-color: #A5C77D;
+    width: 100vw;
 }
 p, h1, h2, h3, h4, h5, h6 {
     font-family: Dosis, sans-serif;
+}
+.aligncenter {
+    align-content: center;
+    justify-content: center;
+}
+.nopad {
+    padding: 0;
 }
 /* Navbar */
 .navbar-brand {
@@ -107,8 +115,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .posts-block {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 .card {
     border-style: solid;
@@ -188,7 +196,18 @@ ul {
     margin-bottom: 0.5rem;
     
 }
-
+/* dashboard */
+.dashboard {
+    border-top: 2px solid #A5C77D;
+    border-bottom: 2px solid #A5C77D;
+}
+.dashboardbtn {
+    color: #AC3448;
+    
+}
+.dashboardcontrols {
+    margin-bottom: 0.5rem;
+}
 .masthead {
     margin-top: 10px;
     overflow: hidden;
