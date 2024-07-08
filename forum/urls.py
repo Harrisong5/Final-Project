@@ -11,6 +11,7 @@ urlpatterns = [
     path('change_password', views.PasswordChange.as_view(template_name = "forum/change_password.html"), name="change_password"),
     path('password_success', views.password_success, name="password_success"),
     path('create_post', views.CreatePost.as_view(), name="create_post"),
+    path('post/<int:pk>/delete/', views.PostDelete.as_view(), name='delete_post'),
     
     
 ]

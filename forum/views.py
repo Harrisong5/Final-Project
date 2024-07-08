@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
+from django.views.generic.edit import DeleteView
 from .models import Post, Comment
-from . forms import CreateUserForm, LoginForm, PasswordForm, CreatePostForm
+from . forms import CreateUserForm, LoginForm, PasswordForm, CreatePostForm, DeleteForm
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -118,3 +119,21 @@ class CreatePost(LoginRequiredMixin, generic.CreateView):
     form_class = CreatePostForm
     template_name = "forum/create_post.html"
     success_url = "/dashboard"
+
+
+class PostDelete(LoginRequiredMixin, DeleteView):
+    model = Post
+    form_class = DeleteForm
+    template_name = 'forum/delete_post.html'
+    success_url = reverse_lazy('dashboard')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user 
+        return super().form_valid(form)
+
+def delete_post(request, postID):
+    post = get_object_or_404(Post, pk=postID)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('/dashboard')
+    return render(request, 'delete_confirmation.html', {'post': post})

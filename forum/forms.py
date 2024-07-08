@@ -33,3 +33,8 @@ class CreatePostForm(forms.ModelForm):
         widgets = {
             'author': forms.TextInput(attrs={'value': '', 'id':'author', 'type':'hidden'})
         }
+
+class DeleteForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['postID']

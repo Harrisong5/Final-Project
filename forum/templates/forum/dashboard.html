@@ -50,7 +50,10 @@
                                     <button class="btn"><h2>Edit</h2></button>
                                 </div>
                                 <div class="col-6 text-end">
-                                    <button class="btn"><h2>Delete</h2></button>
+                                    <form method="post" action="{% url 'delete_post' pk=post.postID %}">
+                                        {% csrf_token %}
+                                        <button class="btn" type="submit"><h2>Delete</h2></button>
+                                    </form>
                                 </div>
                             </div>
                          
@@ -84,7 +87,10 @@
                                     <button class="btn"><h2>Edit</h2></button>
                                 </div>
                                 <div class="col-6 text-end">
-                                    <button class="btn"><h2>Delete</h2></button>
+                                    <form method="post" action="{% url 'delete_post' pk=post.postID %}">
+                                        {% csrf_token %}
+                                        <button class="btn" type="submit"><h2>Delete</h2></button>
+                                    </form>
                                 </div>
                             </div>
                          
