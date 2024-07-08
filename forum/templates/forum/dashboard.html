@@ -2,10 +2,19 @@
 
 {% block content %}
 
-
+    <div class="row text-center author ">
+        <h1 class="dashboardheader">{{ user }}</h1>
+    </div>
+    <div class="row text-center">
+        <h2 class="text-pink">{{ email }}</h2>
+    </div>
+    <div class="row">
+        <h2  class="card-title">Bio</h2>
+        <p class="card-content">Your bio here</p>
+    </div>
     <div class="row text-center dashboardcontrols">
         <div class="col-4 aligncenter nopad dashboard">
-            <button class="btn dashboardbtn"><h2>Edit profile</h2></button>
+            <button class="btn dashboardbtn"><h2>Edit bio</h2></button>
         </div>
         <div class="col-4 aligncenter nopad dashboard">
             <a href="{% url 'change_password' %}"><button class="btn dashboardbtn"><h2>Change password</h2></button></a>
@@ -19,7 +28,7 @@
         
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
-                    <p class="author">Posts by {{ current_user }}</p>
+                    <p class="author">Your posts</p>
                     
             </div>
         </div>
