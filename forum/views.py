@@ -86,11 +86,15 @@ def logout(request):
 def dashboard(request):
 
     current_user = request.user
+    email = request.user.email
+    password = request.user.password
     posts = Post.objects.filter(author=current_user)
 
     context = {
         'current_user': current_user,
         'posts': posts,
+        'email': email,
+        'password': password,
     }
 
     return render(request, 'forum/dashboard.html', context)
