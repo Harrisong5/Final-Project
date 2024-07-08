@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Post, Comment
-from . forms import CreateUserForm, LoginForm
+from . forms import CreateUserForm, LoginForm, PasswordForm
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import PasswordChangeView
+from django.urls import reverse_lazy
+
 from django.http import HttpResponse
 
 # Create your views here.
@@ -98,3 +101,11 @@ def dashboard(request):
     }
 
     return render(request, 'forum/dashboard.html', context)
+
+class PasswordChange(PasswordChangeView):
+    form = PasswordForm
+    success_url = reverse_lazy('password_success')
+
+def password_success(request):
+    return render(request, 'forum/password_change_success.html')
+

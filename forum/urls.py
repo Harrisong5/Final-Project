@@ -8,7 +8,8 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('logout', views.logout, name='logout'),
     path('post/<int:pk>', views.post_detail, name='post_detail'),
+    path('change_password', views.PasswordChange.as_view(template_name = "forum/change_password.html"), name="change_password"),
+    path('password_success', views.password_success, name="password_success"),
     
     
-
 ]
