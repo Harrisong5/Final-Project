@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Post, Comment
-from . forms import CreateUserForm, LoginForm, PasswordForm
+from . forms import CreateUserForm, LoginForm, PasswordForm, CreatePostForm
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
@@ -109,3 +110,9 @@ class PasswordChange(PasswordChangeView):
 def password_success(request):
     return render(request, 'forum/password_change_success.html')
 
+
+class CreatePost(LoginRequiredMixin, generic.CreateView):
+    login_url = 'login'
+    form_class = CreatePostForm
+    template_name = "forum/create_post.html"
+    success_url = "/dashboard"

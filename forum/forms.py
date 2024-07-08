@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, Pass
 from django.contrib.auth.models import User
 from django import forms
 from django.forms.widgets import PasswordInput, TextInput
+from .models import Post
 
 class CreateUserForm(UserCreationForm):
 
@@ -23,3 +24,9 @@ class PasswordForm(PasswordChangeForm):
     class Meta:
         model = User
         fields = [ 'old_password', 'new_password1', 'new_password2']    
+
+class CreatePostForm(forms.ModelForm):
+   
+    class Meta:
+        model = Post
+        exclude = ('author', 'date', 'votes', 'slug' )
