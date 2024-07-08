@@ -22,27 +22,19 @@
                             <p class="card-content">{{ post.content }}</p>
                             <p class="card-date">{{ post.date}}</p>
                             <hr>
-                         <h2 class="comments-header">Comments</h2>
-                        
-                        <ul>
-                            {% for comment in post.comments.all %}
-                            <div class="comments-list">
-                                <li>
-                                <p class="comments-author">{{ comment.commentAuthor }}</p>
-                                <p class="comments-date">{{ comment.commentDate }}</p>
-                                <p class="comments-body">{{ comment.commentBody }}</p>
-                                </li>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button class="btn"><h2>Edit</h2></button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn"><h2>Delete</h2></button>
+                                </div>
                             </div>
-                            {% empty %}
-                            <li class="comments-body">No comments yet.</li>
-                            {% endfor %}
+                         
                         </ul>   
-                        </div>
-                        
+                        </div>  
                     </div>
                 </div>
-        {% empty %}
-            <li>No posts available.</li>
         {% endfor %}
         </ul>
 
