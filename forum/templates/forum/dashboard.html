@@ -32,8 +32,7 @@
                     
             </div>
         </div>
-        {% for post in posts %}
-        {% if post.status == 0 %}
+        {% for post in drafts %}
                 <div class="col-md-12 posts-block">
                     <div class="card col-md-10 offset-md-1 mb-4">
                         <div class="card-body">
@@ -61,7 +60,9 @@
                         </div>  
                     </div>
                 </div>
-        {% endif %}
+        
+        {% empty %}
+        <h2 class="card-title">No posts.</h2>
         {% endfor %}
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
