@@ -44,7 +44,7 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)
+            self.slug = (self.title)
         super(Post, self).save(*args, **kwargs)
 
 class Comment(models.Model):

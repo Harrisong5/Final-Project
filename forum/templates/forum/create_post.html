@@ -25,8 +25,16 @@
         <div class="col-6 text-end"><label for="{{ passwordform.old_password.id_for_label }}"><h3 class="form-label" style="color:white;">Youtube URL:</h3></label></div>
         <div class="col-6 text-start">{{ form.youtubeLink}}</div>
     </div>
+    <div class="row">
+        <div class="col-6 text-start">{{ form.author}}</div>
+    </div>
     <input type="submit" value="Submit for admin approval" class="btn btn-primary" style="background-color: #A5C77D; border: none;"/>
 </form>
+
+<script>
+    var name= "{{ user.id }}"
+    document.getElementById("author").value = name;
+</script>
 
 
 {% endblock %}

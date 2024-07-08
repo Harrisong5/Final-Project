@@ -29,4 +29,7 @@ class CreatePostForm(forms.ModelForm):
    
     class Meta:
         model = Post
-        exclude = ('author', 'date', 'votes', 'slug', 'status' )
+        exclude = ('date', 'votes', 'slug', 'status' )
+        widgets = {
+            'author': forms.TextInput(attrs={'value': '', 'id':'author', 'type':'hidden'})
+        }
