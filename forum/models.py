@@ -44,7 +44,15 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = (self.title)
+            import re
+
+            def slugify(s):
+                s = s.lower().strip()
+                s = re.sub(r'[^\w\s-]', '', s)
+                s = re.sub(r'[\s_-]+', '-', s)
+                s = re.sub(r'^-+|-+$', '', s)
+                return s
+            self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
 class Comment(models.Model):
