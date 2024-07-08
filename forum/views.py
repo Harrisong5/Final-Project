@@ -92,11 +92,13 @@ def dashboard(request):
     current_user = request.user
     email = request.user.email
     password = request.user.password
-    posts = Post.objects.filter(author=current_user)
+    posts = Post.objects.filter(author=current_user).order_by('-date')
+    drafts = Post.objects.filter(author=current_user).filter(status=0).order_by('-date')
 
     context = {
         'current_user': current_user,
         'posts': posts,
+        'drafts': drafts,
         'email': email,
         'password': password,
     }

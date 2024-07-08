@@ -28,11 +28,12 @@
         
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
-                    <p class="author">Your posts</p>
+                    <p class="author">Awaiting admin approval</p>
                     
             </div>
         </div>
         {% for post in posts %}
+        {% if post.status == 0 %}
                 <div class="col-md-12 posts-block">
                     <div class="card col-md-10 offset-md-1 mb-4">
                         <div class="card-body">
@@ -57,8 +58,42 @@
                         </div>  
                     </div>
                 </div>
+        {% endif %}
         {% endfor %}
-        </ul>
+        <div class="col-md-12 posts-block">
+            <div class="col-md-10 offset-md-1 mb-4">
+                    <p class="author">Your published posts</p>
+                    
+            </div>
+        </div>
+        {% for post in posts %}
+        {% if post.status == 1 %}
+                <div class="col-md-12 posts-block">
+                    <div class="card col-md-10 offset-md-1 mb-4">
+                        <div class="card-body">
+                            <a href="#" class="post-link">
+                                
+                                <a href="{% url 'post_detail' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
+                                <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
+                            </a>
+                            <p class="card-content">{{ post.content }}</p>
+                            <p class="card-date">{{ post.date}}</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button class="btn"><h2>Edit</h2></button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn"><h2>Delete</h2></button>
+                                </div>
+                            </div>
+                         
+                        </ul>   
+                        </div>  
+                    </div>
+                </div>
+        {% endif %}
+        {% endfor %}
 
 
     
