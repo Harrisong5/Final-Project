@@ -29,4 +29,4 @@ class CreatePostForm(forms.ModelForm):
    
     class Meta:
         model = Post
-        exclude = ('author', 'date', 'votes', 'slug' )
+        exclude = ('author', 'date', 'votes', 'slug', 'status' )
