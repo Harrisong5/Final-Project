@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     z-index: 999;
-    height: 12vh;
+    height: 10vh;
     align-items: start;
 }
 #navbarText {
@@ -89,7 +89,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: #7B1F4D;
     padding: 0;
     position: fixed;
-    top: 12vh;
+    top: 10vh;
     z-index: 1000;
     height: 100vh;
     width: 20vw;
@@ -284,6 +284,37 @@ ul {
 .approval {
     color: rgb(222, 146, 168);
 }
+/* Footer */
+footer {
+    position: fixed;
+    width: 100vw;
+    z-index: 1002;
+    bottom: 0;
+    height: 7vh ;
+    padding: 0;
+}
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #A5C77D;
+    margin-top: 1.4vh;
+    padding: 0;
+}
+.footer-text {
+    text-align: end;
+    margin-top: 2.3vh;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    font-size: large;
+}
+.footer-sig {
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin-top: 4vh;
+}
 
 @media only screen and (min-width: 768px) {
     /* Sidebar*/
@@ -324,6 +355,7 @@ ul {
     
 }
 }
+
 
 @media only screen and (min-width: 992px) {
 #navbarText {
