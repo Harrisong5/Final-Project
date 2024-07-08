@@ -30,40 +30,46 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light main-bg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'forum' %}"><img src="https://cdn-icons-png.freepik.com/512/5668/5668408.png" width="60rem" object-position="center"><span class="logo">Beet</span></a>
+        <div class="container-fluid navtop">
+            <a class="navbar-brand" href="{% url 'forum' %}">
+                <img src="https://cdn-icons-png.freepik.com/512/5668/5668408.png" width="60rem" object-position="center">
+                <span class="logo">Beet</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'forum' %}">Home</a>
+                           href="{% url 'forum' %}"><span class="nav-link-text">Home</span></a>
                     </li>
-
-                </ul>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#">New Post</a>
+                        <a class="nav-link {% if request.path == new_post_url %}active{% endif %}" aria-current="page"
+                           href="#"><span class="nav-link-text">New Post</span></a>
                     </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="#" class="nav-link disabled"><span class="nav-link-text" style="color: #a5c77d;">{{ user.username }}</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'dashboard' %}" class="nav-link"><span class="nav-link-text">My Account</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'logout' %}" class="nav-link"><span class="nav-link-text">Logout</span></a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'register' %}" class="nav-link"><span class="nav-link-text">Create an Account</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}" class="nav-link"><span class="nav-link-text">Login</span></a>
+                        </li>
+                    {% endif %}
 
-                </ul>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        {% if user.is_authenticated %}
-                            <p class="author">{{ user.username }}</p>
-                            <p class="author"><a href="{% url 'dashboard' %}">My account</a></p>
-                            <p class="author"><a href="{% url 'logout' %}">Logout</a></p>
-                        {% else %}
-                            <p class="author"><a href="{% url 'register' %}">Create an account</a>
-                            <p class="author"><a href="{% url 'login' %}">Login</a>
-                        {% endif %}
-                    <li>
-
-                </ul>
+                </ul>   
+                
             </div>
         </div>
     </nav>
@@ -78,7 +84,7 @@
                 </div>
             </div>
             <!-- Main Content -->
-            <div class="col-10" style="padding-left: 0px; padding-right: 0px;">
+            <div class="col-10 offset-sm-2 maincontent" style="padding-left: 0px; padding-right: 0px;">
                 <main class="flex-shrink-0 main-bg">
                     {% block content %}
                     <!-- Content goes here -->

@@ -9,6 +9,21 @@ p, h1, h2, h3, h4, h5, h6 {
     align-content: center;
     
 }
+.navbar-nav .nav-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+.nav-link {
+    padding: 0;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+}
+.nav-item {
+    padding: 1.4vw;
+}
 .logo {
     font-family: Dosis, sans-serif;
     font-size: 2rem;
@@ -23,7 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: white;
 }
 .text-light {
-
+    color: #A5C77D;
 }
 
 .dark-bg {
@@ -36,13 +51,48 @@ p, h1, h2, h3, h4, h5, h6 {
 .main-bg {
     background-color: #7B1F4D;
 }
-.text-main {
+.maincontent {
+    margin-left: 20vw;
+}
+.navbar {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    height: 12vh;
+    align-items: start;
+}
+#navbarText {
+    background-color: #7B1F4D;
+    position: relative;
+    top: auto;
+}
+.navtop {
+    background-color: #7B1F4D;
+}
+.nav-link {
+    font-family: Dosis, sans-serif;
+    font-weight: 600;
+    font-size: 2.6vw;
+}
+.nav-link-text {
+    color: white;
+}
+.navbar-nav {
+    text-align: right;
+}
+.navtop {
     
 }
 /* Sidebar*/
 .sidebar-col {
     background-color: #7B1F4D;
     padding: 0;
+    position: fixed;
+    top: 12vh;
+    z-index: 1000;
+    height: 100vh;
+    width: 20vw;
 }
 .sidebar > h1 {
     color: #AE5985;
@@ -55,8 +105,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .posts-block {
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 .card {
     border-style: solid;
@@ -85,6 +135,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #A5C77D;
     font-size: 6vw;
     font-weight: 500;
+    margin-bottom: 0;
 }
 .card-title {
     color: white;
@@ -272,4 +323,17 @@ ul {
     font-size: 1rem;
     
 }
+}
+
+@media only screen and (min-width: 992px) {
+#navbarText {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar-brand {
+    position: fixed;
+    z-index: 1001;
+    
+}
+
 }
