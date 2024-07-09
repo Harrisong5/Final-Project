@@ -73,8 +73,9 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 1003;
     height: 10vh;
+    min-height: 100px;
     align-items: start;
 }
 #navbarText {
@@ -96,7 +97,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .navbar-nav {
     text-align: right;
 }
-
+.navbar-toggler {
+    border: 2px solid white;
+}
+.navbar-toggler-icon {
+    color: white;
+}
 /* Main content*/
 .main-bg {
     background-color: #7B1F4D;
@@ -112,7 +118,8 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: #7B1F4D;
     padding: 0;
     position: fixed;
-    top: 10vh;
+    top: 40vh;
+    margin-top: 20px;
     z-index: 1000;
     height: 100vh;
     width: 20vw;
