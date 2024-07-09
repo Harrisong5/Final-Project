@@ -93,6 +93,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .nav-link-text {
     color: white;
+    font-size: 250%;
 }
 .navbar-nav {
     text-align: right;
@@ -321,6 +322,10 @@ footer {
     height: 7vh ;
     padding: 0;
 }
+
+footer > .row {
+    margin-top: 1vh;
+}
 .footer-socials {
     display: flex;
     justify-content: center;
@@ -328,24 +333,49 @@ footer {
     color: #A5C77D;
     margin-top: 1.4vh;
     padding: 0;
+    font-size: 60%;
 }
 .footer-text {
-    text-align: end;
-    margin-top: 2.3vh;
+    text-align: center;
+    margin-top: 2vh;
+    padding-right: 10px;
     display: flex;
     justify-content: end;
     padding: 0;
-    font-size: large;
+    font-size: 70%;
+    
+}
+.footer-text > p {
+    color: #2F3702;
 }
 .footer-sig {
+    text-align: center;
+    margin-top: 3vh;
     display: flex;
+    text-wrap: wrap;
     justify-content: center;
-    font-size: small;
-    margin-top: 4vh;
+    padding: 0;
+    font-size: 40%;
+}
+
+
+@media only screen and (min-width: 400px) {
+.footer-text > p {
+    color: white;
+}   
+}
+@media only screen and (min-width: 560px) {
+ .nav-link-text {
+    font-size: 175%;
+}
 }
 
 @media only screen and (min-width: 768px) {
-/* Sidebar */
+/* Nav menu */
+.nav-link-text {
+    font-size: 125%;
+}
+    /* Sidebar */
 .sidebar > h1 {
     font-size: 1.2rem;
 }
@@ -382,11 +412,32 @@ footer {
     font-size: 1rem;
     
 }
+/* Footer */
+.footer-text {
+    font-size: 100%;    
+}
+
+.footer-sig {
+    font-size: 70%;
+}
+.footer-socials {
+    font-size: 80%;
+}
 }
 
 
 @media only screen and (min-width: 992px) {
 /* Nav bar */
+.nav-link-text {
+    font-size: 75%;
+}
+.navbar-collapse {
+    margin-left: 19vw;
+}
+.navbar-collapse > ul > li {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
 #navbarText {
     display: flex;
     justify-content: space-around;
@@ -396,5 +447,16 @@ footer {
     z-index: 1001;
     
 }
+/* Footer */
+.footer-text {
+    font-size: 130%;    
+    justify-content: end;
+}
 
+.footer-sig {
+    font-size: 85%;
+}
+.footer-socials {
+    font-size: 120%;
+}
 }
