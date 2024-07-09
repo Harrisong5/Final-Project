@@ -34,6 +34,17 @@ class CreatePostForm(forms.ModelForm):
             'author': forms.TextInput(attrs={'value': '', 'id':'author', 'type':'hidden'})
         }
 
+class EditPostForm(forms.ModelForm):
+   
+    class Meta:
+        model = Post
+        exclude = ('date', 'votes', 'slug', )
+        widgets = {
+            'author': forms.TextInput(attrs={'value': '', 'id':'author', 'type':'hidden'}),
+            'status': forms.TextInput(attrs={'value': 0, 'id':'status', 'type':'hidden'}),
+    
+        }
+
 class DeleteForm(forms.ModelForm):
     class Meta:
         model = Post

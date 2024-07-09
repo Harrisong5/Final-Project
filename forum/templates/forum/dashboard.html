@@ -46,7 +46,11 @@
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn"><h2>Edit</h2></button>
+                         
+                                        {% csrf_token %}
+                                        <!-- tried using action="{% url 'edit_post' pk=post.postID %}" but did not prepopulate the form with post data -->
+                                        <a class="btn" href="/post/{{post.pk}}/edit"><h2>Edit</h2></a>
+
                                 </div>
                                 <div class="col-6 text-end">
                                     <form method="post" action="{% url 'delete_post' pk=post.postID %}">
@@ -68,10 +72,7 @@
                     <h2 class="card-title">No posts.</h2>    
             </div>
         </div>
-                    
-          
 
-        
         {% endfor %}
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
@@ -94,7 +95,10 @@
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn"><h2>Edit</h2></button>
+
+                                        {% csrf_token %}
+                                        <a class="btn" href="/post/{{post.pk}}/edit"><h2>Edit</h2></a>
+
                                 </div>
                                 <div class="col-6 text-end">
                                     <form method="post" action="{% url 'delete_post' pk=post.postID %}">

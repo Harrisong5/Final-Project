@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<form method="POST" autocomplete="off" style="text-align: center;">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update post" class="btn btn-primary" style="background-color: #A5C77D; border: none;"/>
+</form>
+
+<script>
+    var name= "{{ user.id }}"
+    document.getElementById("author").value = name;
+    var draft= "0"
+    document.getElementById("status").value = draft;
+
+</script>
+
+{% endblock %}
