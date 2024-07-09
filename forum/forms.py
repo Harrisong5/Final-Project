@@ -4,6 +4,7 @@ from django import forms
 from django.forms.widgets import PasswordInput, TextInput
 from .models import Post
 
+# User register
 class CreateUserForm(UserCreationForm):
 
     class Meta:
@@ -11,11 +12,13 @@ class CreateUserForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+# User log in 
 class LoginForm(AuthenticationForm):
 
     username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
 
+# User changing password
 class PasswordForm(PasswordChangeForm):
    
     old_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Old Password'}))
@@ -25,6 +28,7 @@ class PasswordForm(PasswordChangeForm):
         model = User
         fields = [ 'old_password', 'new_password1', 'new_password2']    
 
+# User create a new post
 class CreatePostForm(forms.ModelForm):
    
     class Meta:
@@ -34,6 +38,7 @@ class CreatePostForm(forms.ModelForm):
             'author': forms.TextInput(attrs={'value': '', 'id':'author', 'type':'hidden'})
         }
 
+# User edit one of their existing posts
 class EditPostForm(forms.ModelForm):
    
     class Meta:
@@ -45,6 +50,7 @@ class EditPostForm(forms.ModelForm):
     
         }
 
+# User delete one of their existing posts
 class DeleteForm(forms.ModelForm):
     class Meta:
         model = Post

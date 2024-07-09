@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 
+# Helps user find posts on chosen topics
 class Community(models.Model):
     commUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="forum_communities")
     commTitle = models.CharField(max_length=200)
@@ -16,6 +17,7 @@ class Community(models.Model):
     def __str__(self):
         return self.commTitle
 
+# Joins a user to be able to post in a specific community
 class JoinComm(models.Model):
     JoinCommUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="forum_joined_comms")
     JoinComm = models.ManyToManyField(Community, related_name="forum_comms")
@@ -24,6 +26,7 @@ class JoinComm(models.Model):
     def __str__(self):
         return self.JoinCommUser.username
 
+# Model for a post
 class Post(models.Model):
     postID = models.AutoField(primary_key=True)
     community = models.ForeignKey(Community, on_delete=models.CASCADE, related_name="post_community")
@@ -55,6 +58,7 @@ class Post(models.Model):
             self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
+# Model for comments on a specific post
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     commentAuthor = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comment_author")

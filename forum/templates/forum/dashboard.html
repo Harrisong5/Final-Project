@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+    <!-- User info, bio, controls -->
     <div class="row text-center author ">
         <h1 class="dashboardheader">{{ user }}</h1>
     </div>
@@ -25,13 +25,14 @@
 
         
     </div>
-        
+    <!-- posts by user -->
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
                     <p class="author">Awaiting admin approval</p>
                     
             </div>
         </div>
+        <!-- unpublished -->
         {% for post in drafts %}
                 <div class="col-md-12 posts-block">
                     <div class="card col-md-10 offset-md-1 mb-4">
@@ -66,7 +67,7 @@
                 </div>
         
         {% empty %}
-        
+        <!-- if no posts -->
         <div class="col-md-12 posts-block">
             <div class="col-md-10 offset-md-1 mb-4">
                     <h2 class="card-title">No posts.</h2>    
@@ -80,8 +81,8 @@
                     
             </div>
         </div>
+        <!-- Published -->
         {% for post in posts %}
-        {% if post.status == 1 %}
                 <div class="col-md-12 posts-block">
                     <div class="card col-md-10 offset-md-1 mb-4">
                         <div class="card-body">
@@ -112,11 +113,14 @@
                         </div>  
                     </div>
                 </div>
-        {% endif %}
+        {% empty %}
+        <!-- if no posts -->
+                <div class="col-md-12 posts-block">
+                    <div class="col-md-10 offset-md-1 mb-4">
+                            <h2 class="card-title">No posts.</h2>    
+                    </div>
+                </div>
         {% endfor %}
-
-
-    
 
 
 {% endblock %}

@@ -8,7 +8,7 @@
     {{ form }}
     <input type="submit" value="Update post" class="btn btn-primary" style="background-color: #A5C77D; border: none;"/>
 </form>
-
+<!-- auto fills in author field with user and sets status back to 0 -->
 <script>
     var name= "{{ user.id }}"
     document.getElementById("author").value = name;
