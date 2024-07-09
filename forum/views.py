@@ -141,3 +141,14 @@ class PostDelete(LoginRequiredMixin, DeleteView):
         form.instance.author = self.request.user 
         return super().form_valid(form)
 
+def SearchPosts(request):
+    
+    if request.method == "POST":
+
+        searched = request.POST['searched']
+
+        posts = Post.objects.filter(title__contains=searched)
+
+        return render(request, 'forum/search_results.html', {'searched':searched, 'posts':posts})
+
+

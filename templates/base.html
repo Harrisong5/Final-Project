@@ -46,6 +46,10 @@
                            href="{% url 'forum' %}"><span class="nav-link-text">Home</span></a>
                     </li>
                     <li class="nav-item">
+                        <form class="nav-link" method=POST
+                           action="{% url 'search_posts' %}"><input type="search" name="searched"><button class="btn" type="submit">search</button></a>
+                    </li>
+                    <li class="nav-item">
                         {% if user.is_authenticated %}
                             <a class="nav-link" aria-current="page" href="{% url 'create_post' %}"><span class="nav-link-text">New Post</span></a>
                         {% else %}
