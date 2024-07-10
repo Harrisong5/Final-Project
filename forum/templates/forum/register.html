@@ -10,21 +10,25 @@
             {{ registerform.username }}
             {{ registerform.username.errors }}
         </div>
+        <br>
         <div class="form-group">
             <label for="{{ registerform.email.id_for_label }}"><h3 class="form-label" style="color:white;">Email:</h3></label>
             {{ registerform.email }}
             {{ registerform.email.errors }}
         </div>
+        <br>
         <div class="form-group">
             <label for="{{ registerform.password1.id_for_label }}" ><h3 class="form-label" style="color:white;">Password:</h3></label>
             {{ registerform.password1 }}
             {{ registerform.password1.errors }}
         </div>
+        <br>
         <div class="form-group">
             <label for="{{ registerform.password2.id_for_label }}" ><h3 class="form-label" style="color:white;">Confirm Password:</h3></label>
             {{ registerform.password2 }}
             {{ registerform.password2.errors }}
         </div>
+        <br>
         <input type="submit" value="Register" class="btn larger" />
     </form>
 </div>

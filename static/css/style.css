@@ -394,19 +394,19 @@ footer {
     width: 100vw;
     z-index: 1002;
     bottom: 0;
-    height: 7vh ;
+    height: 7vh;
     padding: 0;
 }
 
 footer > .row {
-    margin-top: 1vh;
 }
 .footer-socials {
     display: flex;
     justify-content: center;
     align-content: center;
     color: #A5C77D;
-    margin-top: 1.4vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0;
     font-size: 60%;
 }

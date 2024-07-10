@@ -37,7 +37,7 @@ def register(request):
 
             form.save()
 
-            return redirect('my_login')
+            return redirect('login')
     else:
         form = CreateUserForm()
     return render(request, 'forum/register.html', {'registerform': form})
