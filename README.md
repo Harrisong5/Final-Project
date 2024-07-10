@@ -60,31 +60,34 @@ project board
 
 Beet is inspired by beetroots, where digging up a post within a forum can feel like pulling out a fresh vegetable from the ground!
 
-Logo
+### Mock logo
 A simplistic Beetroot icon was chosen
-https://cdn-icons-png.freepik.com/512/5668/5668408.png
+![Logo](https://cdn-icons-png.freepik.com/512/5668/5668408.png)
 
-Colour scheme:
-Themed around Beetroots vibrant colours as well as earthy contrasting colours
-
-#7B1F4D - Main theming colour of background
-
-#AE5985 - Secondary colour mainly used for bulk text and buttons background
-
-#AC3448 - Tertiary colour for less important text such as post dates
-
-#A5C77D - Contrasting colour used to make usernames stand out
-
-#2F3702 - Darker earthy colour for footer and borders
-
-#FFF - white for headings and button text
+### Colour scheme:
+Themed around Beetroots vibrant colours as well as earthy contrasting colours, I used Coolers.co to help see some colour combinations together: https://coolors.co/7b1f4d-ac3448-ae5985-2f3702-a5c77d
 
 
-Font
+
+![Hex Color Preview](/README%20assets/colours/7B1F4D.png) #7B1F4D - Main theming colour of background
+
+![Hex Color Preview](/README%20assets/colours/AE5985.png) #AE5985 - Secondary colour mainly used for bulk text and buttons background
+
+![Hex Color Preview](/README%20assets/colours/AC3448.png) #AC3448 - Tertiary colour for less important text such as post dates
+
+![Hex Color Preview](/README%20assets/colours/A5C77D.png) #A5C77D - Contrasting colour used to make usernames stand out
+
+![Hex Color Preview](/README%20assets/colours/2F3702.png) #2F3702 - Darker earthy colour for footer and borders
+
+![Hex Color Preview](/README%20assets/colours/FFFFFF.png) #FFFFFF - white for headings and button text
+
+
+### Font
 
 "Dosis"
 
-A consistent font was chosen for the website that was clear to read whilst offering a softer, more nature-like look without hard edges.
+A consistent font was chosen for the website that was clear to read whilst offering a softer, more nature-like look without hard edges. 
+![Font sample](/README%20assets/font-dosis.png)
 
 
 ## Features:
