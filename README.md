@@ -1,131 +1,339 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Beet:
+pic (1)
 
-Welcome Harrison Greenwood,
+Beet is a forum website where users can post and comment, and join different communities to discuss topics with like-minded others. Posts can be combined through various feeds depending on what the user wants to see.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The live application can be viewed here :
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+https:// .herokuapp.com/
 
-## Gitpod Reminders
+Purpose and Target Audience:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Problem Statement: Traditional forums offer little flexibility in what a user can view at once. Going to individual groups and finding specific threads is often at burden for the user.
 
-`python3 -m http.server`
+Purpose: Beet aims to make posts easy to find and joining communities easy. It also aims to make it easy for a user to combine their interests in a clear feed of posts that are delivered straight to them with little effort.
 
-A blue button should appear to click: _Make Public_,
+Target Audience: The primary target audience are existing users of online forums, each with their own set of interests and topics, as well as non-forum users who are currently avoidant of them because it is not presented in a clean and user-friendly way.
 
-Another blue button should appear to click: _Open Browser_.
+Persona and User Stories:
+The test user has used forums in the past, and prefers the system of commenting, however uses them much less and especially finds the user experience on mobile devices off-putting.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+User Stories:
+As a new user, I want to create an account so that I can participate in the forum.
+As a registered user, I want to create a new post so that I can start a discussion.
+As a registered user, I want to comment on posts so that I can participate in discussions.
+As a registered user, I want to receive notifications when someone replies to my post so that I can stay engaged in the discussion.
 
-A blue button should appear to click: _Make Public_,
+Wireframe & Initial Design:
 
-Another blue button should appear to click: _Open Browser_.
+Home Page
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+Log in page
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Register page
 
-### Connecting your Mongo database
+Create a post
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+Group page
 
-------
+Home (Mobile view)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Agile:
+Using Agile principles, I created a projectboard and user stories. Taking into consideration a user's needs and tracking various criteria was a very valuable way to plan and structure my development time. This enabled me to be more efficient with my efforts and ensure progress was tracked and the deadline met.
 
-**June 18, 2024,** Add Mongo back into template
+project board
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Design Choices:
 
-**May 28 2024:** Fix Mongo and Links installs
+Beet is inspired by beetroots, where digging up a post within a forum can feel like pulling out a fresh vegetable from the ground!
 
-**April 26 2024:** Update node version to 16
+Logo
+A simplistic Beetroot icon was chosen
+https://cdn-icons-png.freepik.com/512/5668/5668408.png
 
-**September 20 2023:** Update Python version to 3.9.17.
+Colour scheme:
+Themed around Beetroots vibrant colours as well as earthy contrasting colours
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#7B1F4D - Main theming colour of background
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+#AE5985 - Secondary colour mainly used for bulk text and buttons background
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#AC3448 - Tertiary colour for less important text such as post dates
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#A5C77D - Contrasting colour used to make usernames stand out
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#2F3702 - Darker earthy colour for footer and borders
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#FFF - white for headings and button text
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Font
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+"Dosis"
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+A consistent font was chosen for the website that was clear to read whilst offering a softer, more nature-like look without hard edges.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Features:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Navbar & branding:
+Sidebar:
+Home/default feed:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The home page reflects the branding and theme instantly, using a navbar with clear items that a user can easily see where they can register, login and be able to create their own post. The sidebar provides better navigation of posts specifically, offering more personalised views when logged in. The default feed delivers posts automatically so the user can instantly see content without having to input upon entering the website.
 
-------
+"New Post" - allows user to see that they can create their own post and contribute immediately once they have registered. Redirects to login page if not signed in.
 
-## FAQ about the uptime script
+"Create an account" - ability to sign up by picking a username, password and providing an email address. Not visible if a user is logged in.
 
-**Why have you added this script?**
+"Login" - existing users can login here, they are redirected to their dashboard and the navbar menu will change and display their username.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+Side bar nav items will change what is content is fed to the main section 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Feed - posts are fed individually showing what community they are from, with username, title, content and comments. Results paginated by default in order to see footer more easily.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Dashboard
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+"Change password" - taken to a form where a user can change their password linked to their account 
 
-**So….?**
+Post list - lists posts by logged in user, split into published and ones awaiting approval.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Footer:
+Minimal footer with other social media links and other details.
 
-**Can I opt out?**
+Future Features:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+User profiles - access to a personalised bio and other user's pages with chosen information displayed such as post/comment history
+Commenting - ability to chain comments onto on another in replies
+Votes - implement a simple upvote system, which can influence what is prioritised to be displayed on certain pages, based on an algorithm 
+Search function - a user can input text and search posts by content/title/author and sort by date or search for other users and profiles
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+Database Schema:
 
-Happy coding!
+I used an Entity Relationship Diagram to plan out what models I would need for my database and what components and keys they should have. I used a flowchart to visualise each one's relationship to each other.
+
+The initial draft was changed in another iteration in order to incorporate features more efficiently and reduce unnecessary coding.
+
+
+Data Models:
+
+User
+username	VARCHAR 	[Primary key]
+email		VARCHAR
+password	VARCHAR
+community	VARCHAR		[Foreign key]
+
+Post
+id		INT		[Primary key]
+community	VARCHAR		[Foreign key]
+title		VARCHAR		
+content		TEXT	
+img_link	VARCHAR
+author		VARCHAR		[Foreign key]
+date		DATETIME	
+vote		VARCHAR		[Foreign key]	(Many-to-many)
+status		BOOLEAN	
+
+Community
+title		VARCHAR		[Primary key]
+user		VARCHAR 	[Foreign key]	
+url		VARCHAR	
+img_link	VARCHAR
+description	TEXT	
+date		DATETIME
+post		INT		[Foreign key]
+
+Comment
+id		INT		[Primary key]
+post		INT		[Foreign key]
+username	VARCHAR 	[Foreign key]
+body		TEXT	
+date		DATETIME
+vote		VARCHAR		[Foreign key]	(Many-to-many)	
+
+
+*********
+Validation
+HTML
+Page	W3C URL	Screenshot	Notes
+Home	W3C	home page validate	Pass: button is a descendant of a tag
+Books	W3C	Validate Books page	Pass: No Errors
+Add a Book	W3C	validate adda book page	Pass: No Errors
+Sign In	W3C	validate sign in	Pass: No Errors
+Register	W3C	validate sign up	unclosed elements main and div
+CSS
+I have used the recommended CSS Jigsaw Validator to validate my CSS file.
+
+File	Jigsaw URL	Screenshot	Notes
+style.css	Jigsaw	validate css	Pass: No Errors
+Python
+I have used the recommended PEP8 CI Python Linter to validate all of my Python files.
+
+File	CI URL	Screenshot	Notes
+forms.py	PEP8 CI	![screenshot]forms py	
+Pass: No Errors			
+settings.py	PEP8 CI	![screenshot]settings py	
+Pass: No Errors			
+Book views.py	PEP8 CI	![screenshot]views py	
+Pass: No Errors			
+Book urls.py	PEP8 CI	![screenshot]urls py	
+Pass: No Errors			
+models.py	PEP8 CI	![screenshot]models py	
+Pass: No Errors			
+Responsiveness:
+Development tools were used to test responsiveness on varying sized devices including laptop, mobile and tablet size.
+
+Full testing was performed on the following devices:
+
+Laptops:
+
+Macbook Air 2018 13.3-inch screen
+Lenovo Thinkpad 14" screen
+Mobile Devices:
+
+Google Pixel 4a
+
+Browser Compatibility:
+
+I have tested the site using the following browsers:
+
+Google Chrome
+chrome
+
+Microsoft Edge
+microsoft edge
+
+I can confirm that the site is responsive and looks as expected good on different screen sizes.
+
+Mobile devices:
+
+Screenshot_20231207-234024
+
+Screenshot_20231207-234033
+
+Screenshot_20231207-234013
+
+0
+
+Screenshot_20231207-234117 (1)
+
+Screenshot_20231208-000014
+
+Tablet Devices:
+
+homepage
+
+signup tablet
+
+sign in tablet
+
+books tablet
+
+tabletadd
+
+bookdetails tablet
+*********
+Testing:
+Lighthouse Audit:
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+On a laptop:
+Home
+
+homeaudit
+
+Books
+
+auditbooks
+
+Add a book audit add book
+
+On a mobile device:
+
+Home audit home mobile 
+
+Books auditbooks
+
+Add a book audit addbookmobile
+
+Links
+Link	Expected Outcome	Grade
+Logo	Navigates to the home page when clicked	Fail
+Home	Navigates to the home page when clicked	Pass
+Books	Navigates to a book list page when clicked	Pass
+Add a Book	Navigates to a form to add a book when clicked	Pass
+Register	Navigates to a registration form when clicked	Pass
+Log in	Navigates to a screen where users can log in when clicked	Pass
+Logout	Navigates to a page confirming for the user to log out	Pass
+Testing
+Feature	Expected Outcome	Grade	Screenshots
+Modal	A message will appear informing the user of a successful action	Pass	modal sign out 
+User logged in	Text displays the user logged in with their username	Pass	modal sign in name
+View books	Users can see available books which have been added	Pass	testing books
+Add a book	Add a book to the book collection that will be available to borrow	Pass	addbook
+Admin has access to crud functionality of all additions	Admin can edit or delete any book addition	Pass	admin testing
+Edit a book	A user can edit the details on the book that they have addded. It will update their addition on the books page	Pass	edit book 
+Delete a book	A user who added a book OR an admin can delete a book. It will then be deleted from the DB	Pass	delete book
+Registration	New users can access a registration form from the "Register" link	Pass	testing sign up
+Log in	Users can log in using a form after clicking "Log in"	Pass	sign in testing 
+Log out	Users get logged out after clicking "Log out"	Pass	testing sign out
+Grid display	A CSS grid will display the books in a clear, responsive format	Pass	N/A
+Functional buttons	Edit, delete, create buttons will be functional throughout the site	Pass	edit delete buttons
+Footer	A footer displays social information	Pass	footer
+Social links work	The social links will navigate to a new page when they're clicked. They will open in a new tab	Pass	footer
+Tools and Technologies Used:
+The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
+
+Python used as the back-end programming language.
+
+Git used for version control. (git add, git commit, git push)
+
+GitHub used for secure online code storage.
+
+GitHub Pages used for hosting the deployed front-end site.
+
+Gitpod used as a cloud-based IDE for development.
+
+Bootstrap used as the front-end CSS framework for modern responsiveness and pre-built components.
+
+ElephantSQL used as the Postgres database.
+
+Heroku used for hosting the deployed back-end site.
+
+Cloudinary used for online static file storage.
+
+Canva Utilized for collaborative design and prototyping(wireframes).
+
+Google and Stack Overflow utilized for general research or solving a bug, information gathering, and various online tools.
+
+Languages Used:
+HTML5
+CSS
+Python
+Deployment :
+I used the steps used when deploying our django blog to deploy this application. The instructions for this mainly came from the follow along videos and text-steps provided on the code institute LMS.
+
+Bugs
+All the bugs that occured during the creation of this application have been resolved. There is a section of the application which allows you to reset your password that needs to be implemented, however they were not within the scope of this particular project and will be addressed in the near future along with the other future features.
+
+Credit:
+Although I used the django blog resources provided on the LMS, I also received alot of additional clarification by following along with django projects on YouTube. One of the vidoes I found especially helpful was : https://youtu.be/JzDBCZTgVyw?si=w3BBwJswUjBTm1xw
+
+Stack Overflow was used to solve any smaller bugs and further clarification on errors I was receiving in the terminal.
+
+I used this site to generate a persona and created user stories: https://founderpal.ai/user-persona-generator
+
+A special thanks to all the other indivudals in our cohort for their continuous support throughout the course.
+
+The added book covers and details were taken from the Waterstones Website.
+
+Font Awesome was used for icons and the fonts used were derived from Google Fonts.
+
+Wireframes, logo and flowcharts were created using Canva.
