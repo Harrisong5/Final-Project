@@ -68,6 +68,24 @@ a:hover {
 .larger {
     font-size: 150%;
 }
+.bold {
+    font-weight: bold;
+}
+.system-message {
+    font-size: 150%;
+    color: #2F3702;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem;
+}
+.system-card {
+    border-style: solid;
+    border-color: #2F3702;
+    border-width: 0.2rem;
+    background-color: #A5C77D;
+    border-radius: 0.2rem;
+
+}
 /* Navbar */
 .navbar-brand {
     align-content: center;
@@ -80,6 +98,9 @@ a:hover {
 }
 .nav-link {
     padding: 0;
+}
+.nav-link-text:hover {
+    color: #A5C77D;
 }
 .navbar-nav {
     display: flex;
@@ -136,8 +157,8 @@ a:hover {
 .navbar-toggler-icon {
    
 }
-ent*/
 
+/* Main content*/
 .main-bg {
     background-color: #7B1F4D;
 }
@@ -171,6 +192,10 @@ ent*/
     margin-top: 6vh;
     margin-bottom: 4vh;
     margin-left: 2vw;
+}
+
+.sidebar-link {
+    color: #AE5985;
 }
 
 /* Post list */

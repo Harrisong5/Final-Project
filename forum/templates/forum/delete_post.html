@@ -1,7 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<p>This is for clicking the delete button for a post under your dashboard</p>
-
+<div class="col-12 posts-block">
+    <div class="col-10 offset-1 mb-4">
+        <div class="system-card">
+            <form method="post" action="{% url 'delete_post' pk=post.postID %}">
+                {% csrf_token %}
+                <p class="system-message">Are you sure you want to delete your post "{{ post.title }}"? It's contents and all related comments will be removed.</p>
+                
+                <div class="col-12 text-center"><input type="submit" value="Yes, delete" class="btn larger"> </div>
+                
+            </form>
+            <br>
+            <div class="col-12 text-center">
+                <a href="{% url 'dashboard' %}"><button class="btn larger ">No, take me back!</button></a>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>   
 {% endblock %}

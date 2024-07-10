@@ -9,12 +9,14 @@
             {{ loginform.username }}
             {{ loginform.username.errors }}
         </div>
+        <br>
         <div class="form-group">
             <label for="{{ loginform.password.id_for_label }}"><h3 class="form-label" style="color:white;">Password:</h3></label>
             {{ loginform.password }}
             {{ loginform.password.errors }}
         </div>
-        <input type="submit" value="Login" class="btn btn-primary" style="background-color: #A5C77D;" />
+        <br>
+        <input type="submit" value="Login" class="btn larger" />
     </form>
 </div>
 {% endblock %}

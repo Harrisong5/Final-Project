@@ -17,13 +17,13 @@
             </div>
             <div class="row text-center dashboardcontrols">
                 <div class="col-4 aligncenter nopad dashboard">
-                    <a href="{% url 'dashboard' %}"><button class="btn dashboardbtn"><h5>Edit bio</h5></button></a>
+                    <a href="{% url 'dashboard' %}"><button class="btn dashboardbtn"><h5 class="bold">Edit bio</h5></button></a>
                 </div>
                 <div class="col-4 aligncenter nopad dashboard">
-                    <a href="{% url 'change_password' %}"><button class="btn dashboardbtn"><h5>Change password</h5></button></a>
+                    <a href="{% url 'change_password' %}"><button class="btn dashboardbtn"><h5 class="bold">Change password</h5></button></a>
                 </div>
                 <div class="col-4 aligncenter nopad dashboard">
-                    <a href="{% url 'logout' %}"><button class="btn dashboardbtn"><h5>Logout</h5></button></a>
+                    <a href="{% url 'logout' %}"><button class="btn dashboardbtn"><h5 class="bold">Logout</h5></button></a>
                 </div>
             </div> 
         </div> 
@@ -55,14 +55,14 @@
                          
                                         {% csrf_token %}
                                         <!-- tried using action="{% url 'edit_post' pk=post.postID %}" but did not prepopulate the form with post data -->
-                                        <a class="btn" href="/post/{{post.pk}}/edit"><h5>Edit</h5></a>
+                                        <a class="btn" href="/post/{{post.pk}}/edit"><h5 class="bold">Edit</h5></a>
 
                                 </div>
                                 <div class="col-6 text-end">
-                                    <form method="post" action="{% url 'delete_post' pk=post.postID %}">
+                                        <a class="btn" href="/post/{{post.pk}}/delete">
                                         {% csrf_token %}
-                                        <button class="btn" type="submit"><h5>Delete</h5></button>
-                                    </form>
+                                        <button class="btn" type="submit"><h5 class="bold">Delete</h5></button>
+                                        </a>
                                 </div>
                             </div>
                          
@@ -106,14 +106,14 @@
                                 <div class="col-6">
 
                                         {% csrf_token %}
-                                        <a class="btn" href="/post/{{post.pk}}/edit"><h5>Edit</h5></a>
+                                        <a class="btn" href="/post/{{post.pk}}/edit"><h5 class="bold">Edit</h5></a>
 
                                 </div>
                                 <div class="col-6 text-end">
-                                    <form method="post" action="{% url 'delete_post' pk=post.postID %}">
+                                    <a class="btn" href="/post/{{post.pk}}/delete">
                                         {% csrf_token %}
-                                        <button class="btn" type="submit"><h5>Delete</h5></button>
-                                    </form>
+                                        <button class="btn" type="submit"><h5 class="bold">Delete</h5></button>
+                                        </a>
                                 </div>
                             </div>
                          

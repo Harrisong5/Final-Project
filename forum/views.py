@@ -162,4 +162,7 @@ def SearchPosts(request):
 
         return render(request, 'forum/search_results.html', {'searched':searched, 'posts':posts})
 
+def Soon(request):
+    return render(request, 'forum/coming_soon.html')
+
 
