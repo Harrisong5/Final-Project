@@ -30,21 +30,22 @@
                             <hr>
                             <button onclick="hideshow({{ forloop.counter0 }})" class="btn btn-comments"><h2 class="comments-header">Comments</h2></button>
                             
-                        <ul>
-                            {% for comment in post.comments.all %}
-                            <div class="comments-list" id="comments-list-{{ forloop.parentloop.counter0 }}">
-                                <li>
-                                <p class="comments-author">{{ comment.commentAuthor }}</p>
-                                <p class="comments-date">{{ comment.commentDate }}</p>
-                                <p class="comments-body">{{ comment.commentBody }}</p>
-                                </li>
+                            <div id="comments-container-{{ forloop.counter0 }}" style="display: none;">
+                                <ul>
+                                    {% for comment in post.comments.all %}
+                                    <div class="comments-list">
+                                        <li>
+                                            <p class="comments-author">{{ comment.commentAuthor }}</p>
+                                            <p class="comments-date">{{ comment.commentDate }}</p>
+                                            <p class="comments-body">{{ comment.commentBody }}</p>
+                                        </li>
+                                    </div>
+                                    {% empty %}
+                                    <li class="comments-body">No comments yet.</li>
+                                    {% endfor %}
+                                </ul>
                             </div>
-                            {% empty %}
-                            <li class="comments-body">No comments yet.</li>
-                            {% endfor %}
-                        </ul>   
                         </div>
-                        
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
@@ -71,11 +72,11 @@
 
 <script>
     function hideshow(index) {
-        var commentsList = document.getElementById('comments-list-' + index);
-        if (commentsList.style.display === 'none') {
-            commentsList.style.display = 'block';
+        var commentsContainer = document.getElementById('comments-container-' + index);
+        if (commentsContainer.style.display === 'none') {
+            commentsContainer.style.display = 'block';
         } else {
-            commentsList.style.display = 'none';
+            commentsContainer.style.display = 'none';
         }
     }
 </script>
