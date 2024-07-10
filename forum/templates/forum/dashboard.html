@@ -2,8 +2,8 @@
 
 {% block content %}
 
-    <div class="col-md-12 posts-block">
-        <div class="col-md-10 offset-md-1 mb-4">
+    <div class="col-12 posts-block">
+        <div class="col-10 offset-1 mb-4">
                 <!-- User info, bio, controls -->
             <div class="row text-center author ">
                 <h1 class="dashboardheader">{{ user }}</h1>
@@ -29,21 +29,23 @@
         </div> 
     </div> 
         <!-- posts by user -->
-        <div class="col-md-12 posts-block">
-            <div class="col-md-10 offset-md-1 mb-4">
+        <div class="col-12 posts-block">
+            <div class="col-10 offset-1 mb-4">
                     <p class="author">Awaiting admin approval</p>
                     
             </div>
         </div>
         <!-- unpublished -->
         {% for post in drafts %}
-                <div class="col-md-12 posts-block">
-                    <div class="card col-md-10 offset-md-1 mb-4">
+                <div class="col-12 posts-block">
+                    <div class="card col-10 offset-1 mb-4">
                         <div class="card-body">
                             <p class="card-date">/{{ post.community }}</p>
                             <a href="#" class="post-link">
                                 <a href="{% url 'post_detail' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
-                                <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
+                                 <!-- Votes -->
+                            <!-- <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>-->
+                            </a>
                             </a>
                             <p class="card-content">{{ post.content }}</p>
                             <p class="card-date">{{ post.date}}</p>
@@ -71,29 +73,32 @@
         
         {% empty %}
         <!-- if no posts -->
-        <div class="col-md-12 posts-block">
-            <div class="col-md-10 offset-md-1 mb-4">
+        <div class="col-12 posts-block">
+            <div class="col-10 offset-1 mb-4">
                     <h2 class="card-title">No posts.</h2>    
             </div>
         </div>
 
         {% endfor %}
-        <div class="col-md-12 posts-block">
-            <div class="col-md-10 offset-md-1 mb-4">
+        <div class="col-12 posts-block">
+            <div class="col-10 offset-1 mb-4">
                     <p class="author">Your published posts</p>
                     
             </div>
         </div>
         <!-- Published -->
         {% for post in posts %}
-                <div class="col-md-12 posts-block">
-                    <div class="card col-md-10 offset-md-1 mb-4">
+                <div class="col-12 posts-block">
+                    <div class="card col-10 offset-1 mb-4">
                         <div class="card-body">
                             <a href="#" class="post-link">
                                 
                                 <a href="{% url 'post_detail' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
-                                <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
+                                <!-- Votes -->
+                            <!-- <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>-->
                             </a>
+                            </a>
+                            <hr>
                             <p class="card-content">{{ post.content }}</p>
                             <p class="card-date">{{ post.date}}</p>
                             <hr>
@@ -118,8 +123,8 @@
                 </div>
         {% empty %}
         <!-- if no posts -->
-                <div class="col-md-12 posts-block">
-                    <div class="col-md-10 offset-md-1 mb-4">
+                <div class="col-12 posts-block">
+                    <div class="col-10 offset-1 mb-4">
                             <h2 class="card-title">No posts.</h2>    
                     </div>
                 </div>

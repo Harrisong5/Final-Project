@@ -12,8 +12,8 @@
             <div class="row">
                 
                 {% for post in post_list %}
-                <div class="col-md-12 posts-block">
-                    <div class="card col-md-10 offset-md-1 mb-4">
+                <div class="col-12 posts-block">
+                    <div class="card col-10 offset-1 mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 <p class="card-date">/{{ post.community }}</p>
@@ -21,16 +21,18 @@
                             </div>
                             <a href="#" class="post-link">
                                 <a href="{% url 'post_detail' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
-                                <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>
+                            <!-- Votes -->
+                            <!-- <span><img src="static/assets/beet white fill transp bg.png" width="50rem" alt=""><h4>{{post.votes}}</h4></span>-->
                             </a>
+                            <hr>
                             <p class="card-content">{{ post.content }}</p>
                             <p class="card-date">{{ post.date}}</p>
                             <hr>
-                         <h2 class="comments-header">Comments</h2>
-                        
+                            <button onclick="hideshow({{ forloop.counter0 }})" class="btn btn-comments"><h2 class="comments-header">Comments</h2></button>
+                            
                         <ul>
                             {% for comment in post.comments.all %}
-                            <div class="comments-list">
+                            <div class="comments-list" id="comments-list-{{ forloop.parentloop.counter0 }}">
                                 <li>
                                 <p class="comments-author">{{ comment.commentAuthor }}</p>
                                 <p class="comments-date">{{ comment.commentDate }}</p>
@@ -66,5 +68,14 @@
     {% endif %}
 </div>
 
-
+<script>
+    function hideshow(index) {
+        var commentsList = document.getElementById('comments-list-' + index);
+        if (commentsList.style.display === 'none') {
+            commentsList.style.display = 'block';
+        } else {
+            commentsList.style.display = 'none';
+        }
+    }
+</script>
 {% endblock %}

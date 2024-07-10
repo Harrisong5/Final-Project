@@ -1,7 +1,8 @@
 /* General stylers */
 body {
     background-color: #A5C77D;
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
 }
 p, h1, h2, h3, h4, h5, h6 {
     font-family: Dosis, sans-serif;
@@ -19,6 +20,30 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #7B1F4D;
     background-color: #AE5985;
     font-weight: bold;
+    outline: none;
+}
+.btn:hover {
+    text-decoration: underline;
+
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: #A5C77D;
+}
+
+.btn-comments {
+    padding: 0.2rem;
+}
+.btn:hover {
+    text-decoration: none;
+    color: #A5C77D;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+    color: #A5C77D;
 }
 
 .light-bg {
@@ -171,15 +196,18 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .author {
     color: #A5C77D;
-    font-size: 6vw;
+    font-size: 3vw;
     font-weight: 500;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 .card-title {
     color: white;
     font-size: 5vw;
     font-weight: 600;
+    text-align: center;
 }
+
 .card-content {
     color: #AE5985;
     font-size: 3.4vw;
@@ -189,6 +217,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #AC3448;
     font-weight: bold;
     font-size: 2.4vw;
+    text-align: start;
 }
 hr {
     color: #2F3702;
@@ -201,9 +230,11 @@ ul {
     list-style-type: none;
 
 }
+
 .comments-list {
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
+    display: none;
 }
 .comments-body {
     font-family: Dosis, sans-serif;
@@ -211,6 +242,7 @@ ul {
     font-size: 2.2vw;
     font-weight: 400;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .comments-author{
     color: #A5C77D;
@@ -308,9 +340,6 @@ ul {
     background: transparent;
 }
 
-.btn-delete {
-
-}
 
 .btn-like:hover,
 .btn-like:active {
