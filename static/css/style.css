@@ -105,13 +105,16 @@ p, h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 /* Main content*/
+
 .main-bg {
     background-color: #7B1F4D;
 }
 .maincontent {
     position: relative;
     top: 10vh;
-    margin-left: 20vw;
+    margin-left: 18vw;
+    margin-top: 8vw;
+    margin-bottom: 15vw;
 }
 
 /* Sidebar*/
@@ -119,18 +122,21 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: #7B1F4D;
     padding: 0;
     position: fixed;
-    top: 40vh;
+    top: 0vh;
     margin-top: 20px;
     z-index: 1000;
     height: 100vh;
-    width: 20vw;
+    width: 18vw;
+}
+.sidebar {
+    margin-top: 30vh;
 }
 .sidebar > h1 {
     color: #AE5985;
     font-size: 2.6vw;
     font-weight: bold;
     text-align: center;
-    margin-top: 3vh;
+    margin-top: 6vh;
     margin-bottom: 4vh;
     margin-left: 2vw;
 }
