@@ -432,6 +432,12 @@ footer > .row {
     padding: 0;
     font-size: 40%;
 }
+.social-link {
+    color: #A5C77D;
+}
+.social-link:hover {
+    color: #AE5985;
+}
 
 
 @media only screen and (min-width: 400px) {

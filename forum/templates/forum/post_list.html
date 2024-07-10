@@ -61,7 +61,8 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <br>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="btn larger"> Next &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
