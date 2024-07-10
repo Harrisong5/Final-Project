@@ -156,7 +156,7 @@ When the user makes a successful action or would alter information on the databa
 ### Footer:
 Minimal footer with other social media links and other details. Is easily accessibly by user as it is fixed at the bottom but takes up minimal screen space.
 
-![alt text](/README%20assets/snaps/footer.png)
+![footer](/README%20assets/snaps/footer.png)
 
 ### Future Features:
 
@@ -165,55 +165,61 @@ Access to a personalised bio and other user's pages with chosen information disp
 ### Commenting
 Ability to chain comments onto on another in replies and user's have more access to the current comments model.
 ### Votes
-Implement a simple upvote system, which can influence what is prioritised to be displayed on certain pages, based on an algorithm .
+Implement a simple upvote system, which can influence what is prioritised to be displayed on certain pages, based on an algorithm.
 ### Search function
 A user can input text and search posts by content/title/author and sort by date or search for other users and profiles
-
-
-
+### Video/image links
+Attach videos and images into posts and have them embeded within the post cards for easy viewing.
 
 ## Database Schema:
 
 I used an Entity Relationship Diagram to plan out what models I would need for my database and what components and keys they should have. I used a flowchart to visualise each one's relationship to each other.
 
-The initial draft was changed in another iteration in order to incorporate features more efficiently and reduce unnecessary coding.
+The initial basic draft was changed in another iteration in order to incorporate features more efficiently and reduce unnecessary coding.
+
+![schema1](/README%20assets/schema1.png)
+![schema2](/README%20assets/schema%202.png)
 
 
-Data Models:
+### Data Models:
 
-User
-username	VARCHAR 	[Primary key]
-email		VARCHAR
-password	VARCHAR
-community	VARCHAR		[Foreign key]
+|User| 
+|----|
+**username**    VARCHAR     [Primary key]|
+**email**       VARCHAR
+**password**	VARCHAR
+**community**	VARCHAR		[Foreign key]
 
-Post
-id		INT		[Primary key]
-community	VARCHAR		[Foreign key]
-title		VARCHAR		
-content		TEXT	
-img_link	VARCHAR
-author		VARCHAR		[Foreign key]
-date		DATETIME	
-vote		VARCHAR		[Foreign key]	(Many-to-many)
-status		BOOLEAN	
+|Post|
+|----|
+**id**		    INT		    [Primary key]
+**community**	VARCHAR		[Foreign key]
+**title**		VARCHAR		
+**content**		TEXT	
+**img_link**	VARCHAR
+**author**		VARCHAR		[Foreign key]
+**date**		DATETIME	
+**vote**		VARCHAR		[Foreign key]	(Many-to-many)
+**status**		BOOLEAN	
 
-Community
-title		VARCHAR		[Primary key]
-user		VARCHAR 	[Foreign key]	
-url		VARCHAR	
-img_link	VARCHAR
-description	TEXT	
-date		DATETIME
-post		INT		[Foreign key]
+|Community|
+|----|
+**title**		VARCHAR		[Primary key]
+**user**		VARCHAR 	[Foreign key]	
+**url**		    VARCHAR	
+**img_link**    VARCHAR
+**description** TEXT	
+**date**		DATETIME
+**post**		INT		    [Foreign key]
 
-Comment
-id		INT		[Primary key]
-post		INT		[Foreign key]
-username	VARCHAR 	[Foreign key]
-body		TEXT	
-date		DATETIME
-vote		VARCHAR		[Foreign key]	(Many-to-many)	
+|Comment|
+|----|
+**id**		    INT		    [Primary key]
+**post**		INT		    [Foreign key]
+**username**	VARCHAR 	[Foreign key]
+**body**		TEXT	
+**date**		DATETIME
+**vote**		VARCHAR		[Foreign key]	(Many-to-many)	
 
 
 *********
