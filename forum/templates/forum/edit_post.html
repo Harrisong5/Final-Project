@@ -5,8 +5,9 @@
 
 <form method="POST" autocomplete="off" style="text-align: center;">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Update post" class="btn btn-primary" style="background-color: #A5C77D; border: none;"/>
+    {{ form.as_p }}
+    <br>
+    <input type="submit" value="Update post" class="btn larger"/>
 </form>
 <!-- auto fills in author field with user and sets status back to 0 -->
 <script>

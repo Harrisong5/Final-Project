@@ -86,6 +86,52 @@ a:hover {
     border-radius: 0.2rem;
 
 }
+/* forms */
+label {
+    color: white;
+    font-size: 1.67rem;
+    font-weight: 500;
+}
+textarea {
+    background-color: #AE5985;
+    color: #7B1F4D;
+    font-size: larger;
+    box-shadow: none;
+    border: 2px solid #2F3702;
+    border-radius: 0.2rem;
+}
+textarea:focus {
+    outline: none;
+    border-color: #A5C77D;
+}
+input {
+    background-color: #AE5985;
+    color: #7B1F4D;
+    font-size: larger;
+    border: 2px solid #2F3702;
+    border-radius: 0.2rem;
+}
+input:focus {
+    outline: none;
+    border-color: #A5C77D;
+}
+select {
+    background-color: #AE5985;
+    color: #7B1F4D;
+    font-size: larger;
+    border: 2px solid #2F3702;
+    border-radius: 0.2rem;
+}
+select:focus {
+    outline: none;
+    border-color: #A5C77D;
+}
+option{
+    background-color: #AE5985
+}
+option:focus {
+    background-color: #A5C77D
+}
 /* Navbar */
 .navbar-brand {
     align-content: center;
@@ -364,7 +410,6 @@ ul {
 /* Buttons */
 
 .link {
-    color: #23BBBB;
     text-decoration: none;
 }
 

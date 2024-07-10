@@ -4,31 +4,7 @@
 
 <form method="POST" autocomplete="off" style="text-align: center; ">
     {% csrf_token %}
-    <div class="row">
-        <div class="col-6 text-end"><label for="{{ passwordform.old_password.id_for_label }}"><h3 class="form-label" style="color:white;">Community:</h3></label></div>
-        <div class="col-6 text-start">{{ form.community }}</div>
-    </div>
-    <div class="row">
-        <div class="col-6 text-end"><label for="{{ passwordform.old_password.id_for_label }}"><h3 class="form-label" style="color:white;">Title:</h3></label></div>
-        <div class="col-6 text-start">{{ form.title }}</div>
-
-    </div>
-    <div class="row">
-        <div class="col-6 text-end"><label for="{{ passwordform.old_password.id_for_label }}"><h3 class="form-label" style="color:white;">Content:</h3></label></div>
-        <div class="col-6 text-start">{{ form.content}}</div>
-    </div>
-    <div class="row">
-        <div class="col-6 text-end"><label for="{{ passwordform.old_password.id_for_label }}"><h3 class="form-label" style="color:white;">Image URL:</h3></label></div>
-        <div class="col-6 text-start">{{ form.imgLink}}</div>
-    </div>
-    <div class="row">
-        <div class="col-6 text-end"><label for="{{ passwordform.old_password.id_for_label }}"><h3 class="form-label" style="color:white;">Youtube URL:</h3></label></div>
-        <div class="col-6 text-start">{{ form.youtubeLink}}</div>
-    </div>
-    <div class="row">
-        <div class="col-6 text-start">{{ form.author}}</div>
-    </div>
-    <br>
+    {{ form.as_p }}
     <input type="submit" value="Submit for admin approval" class="btn larger"/>
 </form>
 
