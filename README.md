@@ -1,4 +1,4 @@
-Beet:
+# Beet:
 pic (1)
 
 Beet is a forum website where users can post and comment, and join different communities to discuss topics with like-minded others. Posts can be combined through various feeds depending on what the user wants to see.
@@ -7,7 +7,7 @@ The live application can be viewed here :
 
 https:// .herokuapp.com/
 
-Purpose and Target Audience:
+## Purpose and Target Audience:
 
 Problem Statement: Traditional forums offer little flexibility in what a user can view at once. Going to individual groups and finding specific threads is often at burden for the user.
 
@@ -24,29 +24,39 @@ As a registered user, I want to create a new post so that I can start a discussi
 As a registered user, I want to comment on posts so that I can participate in discussions.
 As a registered user, I want to receive notifications when someone replies to my post so that I can stay engaged in the discussion.
 
-Wireframe & Initial Design:
+## Wireframe & Initial Design:
 
-Home Page
+Initial, minimal wireframes were created first to plan what pages might be needed. A second, more high fidelity set after more design considerations were also made after.  
+### Home Page:
+![Alt text](/README%20assets/v1/home.png){width=500px}
 
+### Log in page
+![Alt text](/README%20assets/v1/login.png){width=500px}
 
-Log in page
+### Register page
+![Alt text](/README%20assets/v1/register.png){width=500px}
+### Create a post
+![Alt text](/README%20assets/v1/create%20post.png){width=500px}
+### Group page
+![Alt text](/README%20assets/v1/group%20view.png){width=500px}
+### Home (Mobile view)
+![Alt text](/README%20assets/v1/home%20(mobile).png){height=400px}
 
+After considering some design, some colours and branding were implemented:
 
-Register page
+### Home 
+![Alt text](/README%20assets/v1.1/home.png){width=500px}
+### Dashboard 
+![Alt text](/README%20assets/v1.1/dashboard.png){width=500px}
+### Mobile 
+![Alt text](/README%20assets/v1.1/mobile.png){width=500px}
 
-Create a post
-
-Group page
-
-Home (Mobile view)
-
-
-Agile:
+## Agile:
 Using Agile principles, I created a projectboard and user stories. Taking into consideration a user's needs and tracking various criteria was a very valuable way to plan and structure my development time. This enabled me to be more efficient with my efforts and ensure progress was tracked and the deadline met.
 
 project board
 
-Design Choices:
+## Design Choices:
 
 Beet is inspired by beetroots, where digging up a post within a forum can feel like pulling out a fresh vegetable from the ground!
 
@@ -77,12 +87,11 @@ Font
 A consistent font was chosen for the website that was clear to read whilst offering a softer, more nature-like look without hard edges.
 
 
-Features:
+## Features:
 
-Navbar & branding:
-Sidebar:
-Home/default feed:
-
+### Navbar & branding:
+### Sidebar:
+### Home/default feed:
 The home page reflects the branding and theme instantly, using a navbar with clear items that a user can easily see where they can register, login and be able to create their own post. The sidebar provides better navigation of posts specifically, offering more personalised views when logged in. The default feed delivers posts automatically so the user can instantly see content without having to input upon entering the website.
 
 "New Post" - allows user to see that they can create their own post and contribute immediately once they have registered. Redirects to login page if not signed in.
@@ -115,7 +124,7 @@ Search function - a user can input text and search posts by content/title/author
 
 
 
-Database Schema:
+## Database Schema:
 
 I used an Entity Relationship Diagram to plan out what models I would need for my database and what components and keys they should have. I used a flowchart to visualise each one's relationship to each other.
 
