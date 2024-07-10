@@ -1,6 +1,6 @@
 /* General stylers */
 body {
-    background-color: #A5C77D;
+    background-color: #7B1F4D;
     width: 100%;
     overflow-x: hidden;
 }
@@ -64,6 +64,10 @@ a:hover {
 .faded {
     color: rgb(172, 175, 175);
 }
+
+.larger {
+    font-size: 150%;
+}
 /* Navbar */
 .navbar-brand {
     align-content: center;
@@ -126,10 +130,13 @@ a:hover {
 .navbar-toggler {
     border: 2px solid white;
 }
-.navbar-toggler-icon {
+.navbar-toggler:focus {
     color: white;
 }
-/* Main content*/
+.navbar-toggler-icon {
+   
+}
+ent*/
 
 .main-bg {
     background-color: #7B1F4D;
@@ -466,9 +473,12 @@ footer > .row {
 .footer-socials {
     font-size: 80%;
 }
+
+/* dashboard */
+.dashboardheader {
+    font-size: 150%;
 }
-
-
+}
 @media only screen and (min-width: 992px) {
 /* Nav bar */
 .nav-link-text {
@@ -501,5 +511,11 @@ footer > .row {
 }
 .footer-socials {
     font-size: 120%;
+}
+}
+
+@media only screen and (min-width: 1400px) {
+    .nav-link-text {
+    font-size: 1.8rem;
 }
 }
