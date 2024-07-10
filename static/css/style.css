@@ -226,6 +226,10 @@ hr {
     color: #2F3702;
     font-size: 4vw;
 }
+.comments-header:hover {
+    color: #A5C77D;
+
+}
 ul {
     list-style-type: none;
 
@@ -271,8 +275,12 @@ ul {
     margin-left: 5%;
 }
 /* dashboard */
+
+.bio {
+    font-size: 170%;
+}
 .dashboardheader {
-    font-size: 120%;
+    font-size: 180%;
 }
 .dashboard {
     border-top: 2px solid #A5C77D;
