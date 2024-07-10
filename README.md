@@ -93,36 +93,81 @@ A consistent font was chosen for the website that was clear to read whilst offer
 ## Features:
 
 ### Navbar & branding:
+A view of the navbar when no user is currently logged in.
+
+![navbar logged out](/README%20assets/snaps/navbar1.png)
+
+A view on a wider screen of the navbar with a user logged in.
+
+![navbar logged in](/README%20assets/snaps/navbar2.png)
+
+A view on a mobile sized screen. The nav menu toggles to show the menu items to avoid taking up uneccesary screen space.
+
+![navbar mobile](/README%20assets/snaps/navbar%20toggled%20mobile.png)
+
+#### "New Post"
+Allows user to see that they can create their own post and contribute immediately once they have registered. Redirects to login page if not signed in.
+
+![create post](/README%20assets/snaps/create%20post%20form.png)
+
+#### "Create an account" 
+Ability to sign up by picking a username, password and providing an email address. Not visible if a user is logged in.
+
+![register](/README%20assets/snaps/register%20form.png)
+
+
+#### "Login" 
+Existing users can login here, they are redirected to their dashboard and the navbar menu will change and display their username. The form is styled very similarly to the register forms but with only a username and password input field.
+
+
 ### Sidebar:
+The sidebar is a way to navigate different post feeds. It will be more personalised and show different communities a user follows. This makes it easy to find desired posts and is present in the base html file so is always accessible.
+
+![sidebar](/README%20assets/snaps/sidebar.png)
+
+
 ### Home/default feed:
-The home page reflects the branding and theme instantly, using a navbar with clear items that a user can easily see where they can register, login and be able to create their own post. The sidebar provides better navigation of posts specifically, offering more personalised views when logged in. The default feed delivers posts automatically so the user can instantly see content without having to input upon entering the website.
+The home page reflects the branding and theme instantly, using a navbar with clear items that a user can easily see where they can register, login and be able to create their own post. The sidebar provides better navigation of posts specifically, offering more personalised views when logged in. The default feed delivers posts automatically so the user can instantly see content without having to input upon entering the website. Posts are fed individually showing what community they are from, with username, title, content and comments. Results paginated by default in order to see footer more easily.
+Below is a view of it on mobile, the post list can be easily scrolled down.
 
-"New Post" - allows user to see that they can create their own post and contribute immediately once they have registered. Redirects to login page if not signed in.
+![navbar logged in](/README%20assets/snaps/feed%20mobile.png)
 
-"Create an account" - ability to sign up by picking a username, password and providing an email address. Not visible if a user is logged in.
+#### Post view
+When a post title is clicked on, the post can be viewed in more detail on its own page with the comments expanded by default.
+![post view](/README%20assets/snaps/post%20view.png)
 
-"Login" - existing users can login here, they are redirected to their dashboard and the navbar menu will change and display their username.
+### Dashboard
+The dashboard is the what the user sees when they log in. It can also be accessed via "My account" on the navbar. It displays info such as their associated email address and a list of their posts, split into published and awaiting approval sections. When they do not have any "No posts" is displayed instead of the post list. The biography section is a future feature to be implemented.
 
+![dashboard](/README%20assets/snaps/dashboard.png)
 
-Side bar nav items will change what is content is fed to the main section 
+The dashboard post list if a user does have previous posts. They can edit and delete the post and are taken to a confirmation screen before finalising.
 
-Feed - posts are fed individually showing what community they are from, with username, title, content and comments. Results paginated by default in order to see footer more easily.
+![dashboard with posts](/README%20assets/snaps/dashboard%20post%20list.png)
 
-Dashboard
+#### "Change password"
+Takes user to a form where a user can change their password linked to their account. It is also styled in the same way as other forms with input fields for "old password", "new passowrd" and "confirm password".
 
-"Change password" - taken to a form where a user can change their password linked to their account 
+### Confirmation/system notification message
+When the user makes a successful action or would alter information on the database permenentley, such as deleting a post, a system messaged will be shown. Below is an example of one confirming post deletion.
 
-Post list - lists posts by logged in user, split into published and ones awaiting approval.
+![system message](/README%20assets/snaps/delete%20warning.png) 
 
-Footer:
-Minimal footer with other social media links and other details.
+### Footer:
+Minimal footer with other social media links and other details. Is easily accessibly by user as it is fixed at the bottom but takes up minimal screen space.
 
-Future Features:
+![alt text](/README%20assets/snaps/footer.png)
 
-User profiles - access to a personalised bio and other user's pages with chosen information displayed such as post/comment history
-Commenting - ability to chain comments onto on another in replies
-Votes - implement a simple upvote system, which can influence what is prioritised to be displayed on certain pages, based on an algorithm 
-Search function - a user can input text and search posts by content/title/author and sort by date or search for other users and profiles
+### Future Features:
+
+#### User profiles
+Access to a personalised bio and other user's pages with chosen information displayed such as post/comment history and ability to upload a profile picture.
+### Commenting
+Ability to chain comments onto on another in replies and user's have more access to the current comments model.
+### Votes
+Implement a simple upvote system, which can influence what is prioritised to be displayed on certain pages, based on an algorithm .
+### Search function
+A user can input text and search posts by content/title/author and sort by date or search for other users and profiles
 
 
 
