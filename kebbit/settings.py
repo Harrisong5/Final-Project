@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import sys
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -29,8 +30,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-harrisong5-finalproject-14dwxlo3xn3.ws.codeinstitute-ide.net', 
-'.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-harrisong5-finalproject-14dwxlo3xn3.ws.codeinstitute-ide.net',
+    '.herokuapp.com']
 
 
 # Application definition
@@ -85,8 +87,11 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+if 'test' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-harrisong5-finalproject-14dwxlo3xn3.ws.codeinstitute-ide.net", 
+    "https://8000-harrisong5-finalproject-14dwxlo3xn3.ws.codeinstitute-ide.net",
     "https://*.herokuapp.com"
 ]
 
@@ -95,7 +100,8 @@ CSRF_TRUSTED_ORIGINS = [
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 
+    'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
