@@ -4,7 +4,7 @@ Beet is a forum website where users can post and comment, and join different com
 
 The live application can be viewed here :
 
-https:// .herokuapp.com/
+[https:// .herokuapp.com/](https://beet-3a5123bf2df1.herokuapp.com/)
 
 ## Purpose and Target Audience:
 
