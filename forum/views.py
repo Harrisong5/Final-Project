@@ -19,12 +19,16 @@ from django.http import HttpResponse
 # example syntax reminder ^ 
 
 # Loads a list of published posts
+
+
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-date')
     template_name = "forum/post_list.html"
     paginate_by = 6
 
 # Takes a user to register form and creates an account
+
+
 def register(request):
 
     form = CreateUserForm()
@@ -47,6 +51,8 @@ def register(request):
     return render (request, 'forum/register.html', context=context)
 
 # Loads a specific post in more detail when clicked
+
+
 def post_detail(request, pk):
     
     post = get_object_or_404(Post, pk=pk)
@@ -54,6 +60,8 @@ def post_detail(request, pk):
     return render(request, 'forum/post_detail.html', {'post': post})
 
 # Takes user to login form and authenitcates their details
+
+
 def my_login(request):
 
     form = LoginForm()
@@ -89,13 +97,17 @@ def my_login(request):
     return render (request, 'forum/my_login.html', context=context)
 
 # Logs user out
+
+
 def logout(request):
 
     auth.logout(request)
 
     return redirect('logout_success')
 
-# Takes user to their dashboard with account info 
+# Takes user to their dashboard with account info
+
+
 @login_required(login_url="login")
 def dashboard(request):
 
@@ -116,6 +128,8 @@ def dashboard(request):
     return render(request, 'forum/dashboard.html', context)
 
 # Takes user to password change form and alters data linked to their account
+
+
 class PasswordChange(PasswordChangeView):
     form = PasswordForm
     success_url = reverse_lazy('password_success')
@@ -124,6 +138,8 @@ def password_success(request):
     return render(request, 'forum/password_change_success.html')
 
 # Takes user to post creation form
+
+
 class CreatePost(LoginRequiredMixin, generic.CreateView):
     login_url = 'login'
     form_class = CreatePostForm
@@ -131,6 +147,8 @@ class CreatePost(LoginRequiredMixin, generic.CreateView):
     success_url = "/dashboard"
 
 # # Takes user to post edit form for related post by them
+
+
 class EditPost(LoginRequiredMixin, generic.UpdateView):
     login_url = 'login'
     model = Post
@@ -141,6 +159,8 @@ class EditPost(LoginRequiredMixin, generic.UpdateView):
 
 
 # Allows user to delete related post by them
+
+
 class PostDelete(LoginRequiredMixin, DeleteView):
     model = Post
     form_class = DeleteForm
@@ -152,6 +172,8 @@ class PostDelete(LoginRequiredMixin, DeleteView):
         return super().form_valid(form)
 
 # Allows user to enter search term and find related posts
+
+
 def SearchPosts(request):
     
     if request.method == "POST":

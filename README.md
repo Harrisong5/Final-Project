@@ -226,7 +226,16 @@ The initial basic draft was changed in another iteration in order to incorporate
 The W3C HTML validator was used on all my html templates
 https://validator.w3.org/#validate_by_input
 
-The initial validation pulled up a few errors. The majority of them were picking up the Django's curly bracket {} syntax as these are not used in this way for pure HTML, so these could be ignored.
+The initial validation pulled up a few errors across all my html files. Below is a summary of the reoccuring ones.
+| Error   | Notes |
+| -------- | ------- |
+'Bad value' referencing curly braces {} |Django's syntax for its html templates, these are not used in this way for pure HTML, so these could be ignored
+Button elements descendents of a elements|Present in my forms, this did not effect functionality
+H5 elements descendents of button elements|Present in my forms, this also did not effect functionality but was needed for stylings to work
+Doctype not seen before start tag|Due to templating this only needed to be present on my base.html
+Missing head elements and child element title|Due to templating this was flagged with my forms, the required elements are present on my base html.
+Warning: lang attribute|Templates did not include this as the base html 
+
 In this example below I validate my base.html file, the issues were corrected and re-validated until the only errors were related to Django's templates.
 
 ![basehtmlvalid](/README%20assets/testing%20and%20validation/base%20html%20validate.png)
@@ -241,7 +250,7 @@ As I had already tidied up my CSS code before this step, it returned no errors.
 
 ### Python 
 
-I used The Code Institute's Python Linter https://pep8ci.herokuapp.com/
+I used The Code Institute's Python Linter https://pep8ci.herokuapp.com/ to validate my .py files.
 
 I used it to especially check my larger, more core python files such as settings.py, forms.py and models,py.
 
@@ -251,10 +260,14 @@ I used it to especially check my larger, more core python files such as settings
 
 ![models.py](/README%20assets/testing%20and%20validation/models%20py%20validate.png)
 
+The errors found were indentations, line lengths, line spacing and whitespace. These were easily fixed until they passed validation.
+
+![python validated](/README%20assets/testing%20and%20validation/python%20pass.png)
+
 ## Testing
 
 ### Java
-I mainly used a manual tests for my Javascript such as on my homepage. A simple script was used to be able to toggle comments from being visible for each post. 
+I mainly used manual tests for my Javascript such as on my homepage. A simple script was used to be able to toggle comments from being visible for each post. 
 I viewed the console while I toggled the button multiple times to test functionality, and confirmed the class was changing with input from the user.
 
 ![javatest](/README%20assets/testing%20and%20validation/java%20test.png)
