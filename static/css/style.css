@@ -450,10 +450,10 @@ footer > .row {
     justify-content: center;
     align-content: center;
     color: #A5C77D;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.2vh;
+    margin-bottom: 1vh;
     padding: 0;
-    font-size: 60%;
+    font-size: 1.2vh;
 }
 .footer-text {
     text-align: center;
@@ -546,10 +546,7 @@ footer > .row {
 .footer-sig {
     font-size: 70%;
 }
-.footer-socials {
-    font-size: 80%;
-    margin-top: 1rem;
-}
+
 
 /* dashboard */
 .dashboardheader {
@@ -586,24 +583,15 @@ footer > .row {
 .footer-sig {
     font-size: 85%;
 }
-.footer-socials {
-    font-size: 60%;
-    margin-top: 0.4rem;
-}
+
 }
 
 @media only screen and (min-width: 1400px) {
     .nav-link-text {
     font-size: 1.8rem;
 }
-.footer-socials {
-    font-size: 80%;
-    margin-top: 1rem;
-}
+
 }
 @media only screen and (min-width: 1920px) {
-    .footer-socials {
-        font-size: 100%;
-        margin-top: 3rem;
-    }
+
 }
