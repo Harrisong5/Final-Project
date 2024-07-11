@@ -221,37 +221,41 @@ The initial basic draft was changed in another iteration in order to incorporate
 **date**		DATETIME
 **vote**		VARCHAR		[Foreign key]	(Many-to-many)	
 
+## Validation
+ 
+### HTML
+The W3C HTML validator was used on all my html templates
+https://validator.w3.org/#validate_by_input
 
-*********
-Validation
-HTML
-Page	W3C URL	Screenshot	Notes
-Home	W3C	home page validate	Pass: button is a descendant of a tag
-Books	W3C	Validate Books page	Pass: No Errors
-Add a Book	W3C	validate adda book page	Pass: No Errors
-Sign In	W3C	validate sign in	Pass: No Errors
-Register	W3C	validate sign up	unclosed elements main and div
-CSS
-I have used the recommended CSS Jigsaw Validator to validate my CSS file.
+The initial validation pulled up a few errors. The majority of them were picking up the Django's curly bracket {} syntax as these are not used in this way for pure HTML, so these could be ignored.
+In this example below I validate my base.html file, the issues were corrected and re-validated until the only errors were related to Django's templates.
 
-File	Jigsaw URL	Screenshot	Notes
-style.css	Jigsaw	validate css	Pass: No Errors
-Python
-I have used the recommended PEP8 CI Python Linter to validate all of my Python files.
+![basehtmlvalid](/README%20assets/testing%20and%20validation/base%20html%20validate.png)
 
-File	CI URL	Screenshot	Notes
-forms.py	PEP8 CI	![screenshot]forms py	
-Pass: No Errors			
-settings.py	PEP8 CI	![screenshot]settings py	
-Pass: No Errors			
-Book views.py	PEP8 CI	![screenshot]views py	
-Pass: No Errors			
-Book urls.py	PEP8 CI	![screenshot]urls py	
-Pass: No Errors			
-models.py	PEP8 CI	![screenshot]models py	
-Pass: No Errors			
-Responsiveness:
-Development tools were used to test responsiveness on varying sized devices including laptop, mobile and tablet size.
+### CSS
+The W3C CSS validator was used for my style.css file
+https://jigsaw.w3.org/css-validator/validator
+
+As I had already tidied up my CSS code before this step, it returned no errors.
+
+![cssvalid](/README%20assets/testing%20and%20validation/css%20validate.png)
+
+### Python 
+
+I used The Code Institute's Python Linter https://pep8ci.herokuapp.com/
+
+I used it to especially check my larger, more core python files such as settings.py, forms.py and models,py.
+
+![settings.py](/README%20assets/testing%20and%20validation/settings%20py%20validate.png)
+
+![forms.py](/README%20assets/testing%20and%20validation/python%20validator.png)
+
+![models.py](/README%20assets/testing%20and%20validation/models%20py%20validate.png)
+
+## Responsiveness and browser compatability
+
+To test responsiveness for different screen sizes I used the developer tools within my browser to view my website at various different sizes, as well as changing the size dynamically to see how the different components scaled and test any breakpoints.
+
 
 Full testing was performed on the following devices:
 
@@ -275,33 +279,6 @@ microsoft edge
 
 I can confirm that the site is responsive and looks as expected good on different screen sizes.
 
-Mobile devices:
-
-Screenshot_20231207-234024
-
-Screenshot_20231207-234033
-
-Screenshot_20231207-234013
-
-0
-
-Screenshot_20231207-234117 (1)
-
-Screenshot_20231208-000014
-
-Tablet Devices:
-
-homepage
-
-signup tablet
-
-sign in tablet
-
-books tablet
-
-tabletadd
-
-bookdetails tablet
 *********
 Testing:
 Lighthouse Audit:
