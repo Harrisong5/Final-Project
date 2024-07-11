@@ -15,6 +15,7 @@ urlpatterns = [
     path('post/<int:pk>/edit', views.EditPost.as_view(), name='edit_post'),
     path('search', views.SearchPosts, name='search_posts'),
     path('coming_soon', views.Soon, name='coming_soon'),
+    path('logout_success', views.logout_success, name='logout_success'),
     
     
 ]

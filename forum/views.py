@@ -93,7 +93,7 @@ def logout(request):
 
     auth.logout(request)
 
-    return redirect('forum')
+    return redirect('logout_success')
 
 # Takes user to their dashboard with account info 
 @login_required(login_url="login")
@@ -164,5 +164,8 @@ def SearchPosts(request):
 
 def Soon(request):
     return render(request, 'forum/coming_soon.html')
+
+def logout_success(request):
+    return render(request, 'forum/logout_success.html')
 
 

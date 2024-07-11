@@ -316,6 +316,10 @@ The previous screnshots were all taken using Google Chrome. I also tested in Mic
 
 ## Deploying
 
+The app was created on Heroku, initially using settings of "DISABLE_COLLECTSTATIC" to test before setting up my static files. 
+After installing gunicorn and creating a Procfile for my project, adding access for heroku url in my settings.py file and setting DEBUG to False, I was able to link my project from github and manually deploy. 
+After setting up my databse and static files, I changed the config vars on heroku to include the database url and secret key, which enabled me to have it hidden from commits on github for security.
+
 
 Links
 Link	Expected Outcome	Grade
