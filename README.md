@@ -254,30 +254,42 @@ I used it to especially check my larger, more core python files such as settings
 
 ## Responsiveness and browser compatability
 
-To test responsiveness for different screen sizes I used the developer tools within my browser to view my website at various different sizes, as well as changing the size dynamically to see how the different components scaled and test any breakpoints.
+To test responsiveness for different screen sizes I used the developer tools within my browser to view my website at various different sizes and aspect ratios, as well as changing the size dynamically to see how the different components scaled and test any breakpoints. I tested different pages on each screen size, especially checking for body text and form size was appropriate for each. Below are example screenshots of each size.
 
+### Screen size 375 x 667 px 16:9, portrait mode(iPhone SE)
+The navbar is collapsed in this screenshot to show post size, especially body text.
 
-Full testing was performed on the following devices:
+![iphone](/README%20assets/screen%20sizes/iphone%20se%20375.png)
 
-Laptops:
+### Screen size 768 x 1024 px 4:3, portrait mode (iPad Mini)
+The navbar is expanded in this example to show that the links are large and clear.
 
-Macbook Air 2018 13.3-inch screen
-Lenovo Thinkpad 14" screen
-Mobile Devices:
+![ipad](/README%20assets/screen%20sizes/ipad%20mini%20768.png)
 
-Google Pixel 4a
+### Screen size 1024 x 600 px (Nest Hub)
+This was used to test when a device is orientated a different way to see how the site is viewed landscape.
 
-Browser Compatibility:
+![nest hub](/README%20assets/screen%20sizes/nest%20hub%201024.png)
 
-I have tested the site using the following browsers:
+### Screen size 1280 x 800 px 16:10
+A test on a larger screen with wider aspect ratio, showing a form.
 
-Google Chrome
-chrome
+![nest hub](/README%20assets/screen%20sizes/1280%20x%20800.png)
 
-Microsoft Edge
-microsoft edge
+### Screen size 1920 x 1080 px 16:9
+This tested it on more modern resolutions as well as desktop computer sizes.
 
-I can confirm that the site is responsive and looks as expected good on different screen sizes.
+![1080p](/README%20assets/screen%20sizes/1080p.png)
+
+### Screen size 3840 x 2160 px 16:9 (4K)
+Final testing was done to consider larger desktop resolutions and multi-monitor set-ups, although it is likely many users using these setups would not neccesarily view it at full resolution.
+
+![4k](/README%20assets/screen%20sizes/4k.png)
+
+### Browser Compatibility:
+
+The previous screnshots were all taken using Google Chrome. I also tested in Microsoft Edge and Mozilla Firefox.
+
 
 *********
 Testing:
