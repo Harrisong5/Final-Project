@@ -360,53 +360,55 @@ After installing gunicorn and creating a Procfile for my project, adding access 
 After setting up my databse and static files, I changed the config vars on heroku to include the database url and secret key, which enabled me to have it hidden from commits on github for security.
 
 *****
-## (TEMPLATE)
-Tools and Technologies Used:
-The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
+## Technical toolkit and resources
 
-Python used as the back-end programming language.
+||||
+| -------- | ------- | ------- |
+|HTML5, CSS, Javascript| Used as a basis of front-end coding, providing the website structure and appearance 
+|Bootstrap|CSS framework to speed design up, providing a basis of pre-made styling options
+|Python|Language used for back-end logic and communicating to database
+|Postgres Database server|Provided by Code Institute, allowed me to manage data using SQL
+|Django|Framework for Python which made it easy to combine front-end components and back-end components together
+|Github|For storage and version control over my project code
+|Gitpod|IDE used during development
+|Balsamiq|Program used to create wireframes
+|Heroku|Used to deploy and host site
+|ChatGBT|Used to gain a better understanding of concepts and suggest issues
+|Google|Used for research and finding various other tools
+|Code Institute LMS|Providing inital concept teaching and process walkthroughs
 
-Git used for version control. (git add, git commit, git push)
+### Bugs and issues
 
-GitHub used for secure online code storage.
+Continuous testing as described in the "Testing" section of this document as well as attention to process allowed to continually solve any errors or issues I encountered on all stages of this project, with the help of varous resources and tools.
 
-GitHub Pages used for hosting the deployed front-end site.
+### Other credit
 
-Gitpod used as a cloud-based IDE for development.
+#### General project guide
 
-Bootstrap used as the front-end CSS framework for modern responsiveness and pre-built components.
+I used several video tutorials to provide a general idea and a look into different approches to achieve smiliar projects in Django.
 
-ElephantSQL used as the Postgres database.
+- https://www.youtube.com/@aiocallinonecode6506
 
-Heroku used for hosting the deployed back-end site.
+- https://www.youtube.com/@DjangoWorld
 
-Cloudinary used for online static file storage.
+- https://www.youtube.com/@Codemycom
 
-Canva Utilized for collaborative design and prototyping(wireframes).
 
-Google and Stack Overflow utilized for general research or solving a bug, information gathering, and various online tools.
+#### Design
 
-Languages Used:
-HTML5
-CSS
-Python
-Deployment :
-I used the steps used when deploying our django blog to deploy this application. The instructions for this mainly came from the follow along videos and text-steps provided on the code institute LMS.
+Logo chosen from free image website https://www.freepik.com/
 
-Bugs
-All the bugs that occured during the creation of this application have been resolved. There is a section of the application which allows you to reset your password that needs to be implemented, however they were not within the scope of this particular project and will be addressed in the near future along with the other future features.
+Colour pallette chosen using the help of https://coolors.co/
 
-Credit:
-Although I used the django blog resources provided on the LMS, I also received alot of additional clarification by following along with django projects on YouTube. One of the vidoes I found especially helpful was : https://youtu.be/JzDBCZTgVyw?si=w3BBwJswUjBTm1xw
+Google fonts used to find and choose design font https://fonts.google.com/
 
-Stack Overflow was used to solve any smaller bugs and further clarification on errors I was receiving in the terminal.
 
-I used this site to generate a persona and created user stories: https://founderpal.ai/user-persona-generator
+#### Users
 
-A special thanks to all the other indivudals in our cohort for their continuous support throughout the course.
+I was helped by several friends and housemates as they were able to test various features of my project and different stages, as users, and provide feedback.
 
-The added book covers and details were taken from the Waterstones Website.
+#### Other online resources
 
-Font Awesome was used for icons and the fonts used were derived from Google Fonts.
+- https://randomkeygen.com/ was used to generate a secret database key
 
-Wireframes, logo and flowcharts were created using Canva.
+- https://www.w3schools.com/ provided extra learning support and code validation
