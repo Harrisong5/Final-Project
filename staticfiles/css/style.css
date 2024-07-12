@@ -22,6 +22,10 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     outline: none;
 }
+.active {
+    color: white;
+}
+
 .btn:hover {
     text-decoration: underline;
 
@@ -71,6 +75,7 @@ a:hover {
 .bold {
     font-weight: bold;
 }
+
 .system-message {
     font-size: 150%;
     color: #2F3702;

@@ -59,13 +59,32 @@
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+                <li class="btn">
+                    <a class="btn" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true" class="btn">&laquo; Previous</span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <li class="btn pad"><a class="btn" href="?page={{ num }}">{{ num }}</a></li>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <li class="btn"><a class="btn" href="?page={{ num }}">{{ num }}</a></li>
+                {% endif %}
+            {% endfor %}
+
             {% if page_obj.has_next %}
-            <br>
-            <li><a href="?page={{ page_obj.next_page_number }}" class="btn larger"> Next &raquo;</a></li>
+                <li class="btn">
+                    <a class="btn" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                    Next &raquo;
+                    </a>
+                </li>
             {% endif %}
         </ul>
     </nav>
-    {% endif %}
+{% endif %}
 </div>
 
 <script>
