@@ -51,9 +51,11 @@ After considering some design, some colours and branding were implemented:
 ![Alt text](/README%20assets/v1.1/mobile.png){width=500px}
 
 ## Agile:
-Using Agile principles, I created a projectboard and user stories. Taking into consideration a user's needs and tracking various criteria was a very valuable way to plan and structure my development time. This enabled me to be more efficient with my efforts and ensure progress was tracked and the deadline met.
+Using Agile principles, I created a projectboard and user stories. Taking into consideration a user's needs and tracking various criteria was a very valuable way to plan and structure my development time. This enabled me to be more efficient with my efforts and ensure progress was tracked and the deadline met. I was able to test and review features at multiple stages, iterating over my processes and able to improve the project each time until reaching a minimal viable product (MVP). I will be able to continue this process in the future in order to add more features and improve my project even further.
 
-project board
+Below is my project board upon reaching my MVP.
+
+![project board](/README%20assets/project%20board.png)
 
 ## Design Choices:
 
@@ -302,9 +304,7 @@ Edit post|-|Post can be edited and will reset status to not public, no success m
 Change Password|-|Password change updates database User model correctly, no success message
 Logout|Y|A success message could be added
 
-
-
-
+After reviewing these tests, the fixes were made (notifation of more user actions and pageination controls improved) and are updated in the live link. Several other features were also tested and updated where needed, such as social media links on the footer.
 
 ## Responsiveness and browser compatability
 
