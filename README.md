@@ -61,7 +61,8 @@ Beet is inspired by beetroots, where digging up a post within a forum can feel l
 
 ### Mock logo
 A simplistic Beetroot icon was chosen
-![Logo](https://cdn-icons-png.freepik.com/512/5668/5668408.png)
+https://cdn-icons-png.freepik.com/512/5668/5668408.png
+![Logo](README assets/beetroot logo.png)
 
 ### Colour scheme:
 Themed around Beetroots vibrant colours as well as earthy contrasting colours, I used Coolers.co to help see some colour combinations together: https://coolors.co/7b1f4d-ac3448-ae5985-2f3702-a5c77d
@@ -287,6 +288,21 @@ Below is an example of a user navigating the website, testing various components
 <video width="1280" height="720" controls>
   <source src="README assets/beet user test muted.mp4" type="video/mp4">
 </video>
+
+| Feature |Passed?|Notes|
+| -------- | ------- | ------- |
+Home view| Y |Post fonts appear to be of appropriate size
+Comments toggle|Y|Comments hidden be default
+Pagination|-|Posts appear paginated and next button functions as intended, but does not have a "previous" button on page 2
+Nav bar links|Y|Each link is active and directs to it's intended page
+Create account|-|Form functions correctly, but no success message
+Login|Y|Form functions and directs to dashboard
+Create post|-|Post appears in dashboard but is not automatically public, but no success message
+Edit post|-|Post can be edited and will reset status to not public, no success message
+Change Password|-|Password change updates database User model correctly, no success message
+Logout|Y|
+
+
 
 ## Responsiveness and browser compatability
 

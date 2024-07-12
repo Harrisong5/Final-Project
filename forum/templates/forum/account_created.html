@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-12 posts-block">
+    <div class="col-10 offset-1 mb-4">
+        <div class="system-card">
+                <p class="system-message">Account creation successful.</p>
+                
+            <br>
+            <div class="col-12 text-center">
+                <a href="{% url 'login' %}"><button class="btn larger ">Log in here</button></a>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>   
+{% endblock %}

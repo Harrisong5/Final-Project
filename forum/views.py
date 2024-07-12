@@ -41,7 +41,7 @@ def register(request):
 
             form.save()
 
-            return redirect('login')
+            return redirect('account_created')
     else:
         form = CreateUserForm()
     return render(request, 'forum/register.html', {'registerform': form})
@@ -144,7 +144,7 @@ class CreatePost(LoginRequiredMixin, generic.CreateView):
     login_url = 'login'
     form_class = CreatePostForm
     template_name = "forum/create_post.html"
-    success_url = "/dashboard"
+    success_url = "/action_success"
 
 # # Takes user to post edit form for related post by them
 
@@ -155,7 +155,7 @@ class EditPost(LoginRequiredMixin, generic.UpdateView):
     form_class = EditPostForm
     template_name = "forum/edit_post.html"
     #fields = ['community', 'title', 'content', 'imgLink', 'youtubeLink' ]
-    success_url = "/dashboard"
+    success_url = "/action_success"
 
 
 # Allows user to delete related post by them
@@ -190,4 +190,8 @@ def Soon(request):
 def logout_success(request):
     return render(request, 'forum/logout_success.html')
 
+def action_success(request):
+    return render(request, 'forum/action_success.html')
 
+def account_created(request):
+    return render(request, 'forum/account_created.html')

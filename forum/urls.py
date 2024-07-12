@@ -16,6 +16,8 @@ urlpatterns = [
     path('search', views.SearchPosts, name='search_posts'),
     path('coming_soon', views.Soon, name='coming_soon'),
     path('logout_success', views.logout_success, name='logout_success'),
+    path('action_success', views.action_success, name='action_success'),
+    path('account_created', views.account_created, name='account_created'),
     
     
 ]
