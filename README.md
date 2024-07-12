@@ -4,7 +4,7 @@ Beet is a forum website where users can post and comment, and join different com
 
 The live application can be viewed here :
 
-[https:// .herokuapp.com/](https://beet-3a5123bf2df1.herokuapp.com/)
+[(https://beet-3a5123bf2df1.herokuapp.com/]
 
 ## Purpose and Target Audience:
 
@@ -300,7 +300,9 @@ Login|Y|Form functions and directs to dashboard
 Create post|-|Post appears in dashboard but is not automatically public, but no success message
 Edit post|-|Post can be edited and will reset status to not public, no success message
 Change Password|-|Password change updates database User model correctly, no success message
-Logout|Y|
+Logout|Y|A success message could be added
+
+
 
 
 
@@ -349,32 +351,8 @@ The app was created on Heroku, initially using settings of "DISABLE_COLLECTSTATI
 After installing gunicorn and creating a Procfile for my project, adding access for heroku url in my settings.py file and setting DEBUG to False, I was able to link my project from github and manually deploy. 
 After setting up my databse and static files, I changed the config vars on heroku to include the database url and secret key, which enabled me to have it hidden from commits on github for security.
 
-
-Links
-Link	Expected Outcome	Grade
-Logo	Navigates to the home page when clicked	Fail
-Home	Navigates to the home page when clicked	Pass
-Books	Navigates to a book list page when clicked	Pass
-Add a Book	Navigates to a form to add a book when clicked	Pass
-Register	Navigates to a registration form when clicked	Pass
-Log in	Navigates to a screen where users can log in when clicked	Pass
-Logout	Navigates to a page confirming for the user to log out	Pass
-Testing
-Feature	Expected Outcome	Grade	Screenshots
-Modal	A message will appear informing the user of a successful action	Pass	modal sign out 
-User logged in	Text displays the user logged in with their username	Pass	modal sign in name
-View books	Users can see available books which have been added	Pass	testing books
-Add a book	Add a book to the book collection that will be available to borrow	Pass	addbook
-Admin has access to crud functionality of all additions	Admin can edit or delete any book addition	Pass	admin testing
-Edit a book	A user can edit the details on the book that they have addded. It will update their addition on the books page	Pass	edit book 
-Delete a book	A user who added a book OR an admin can delete a book. It will then be deleted from the DB	Pass	delete book
-Registration	New users can access a registration form from the "Register" link	Pass	testing sign up
-Log in	Users can log in using a form after clicking "Log in"	Pass	sign in testing 
-Log out	Users get logged out after clicking "Log out"	Pass	testing sign out
-Grid display	A CSS grid will display the books in a clear, responsive format	Pass	N/A
-Functional buttons	Edit, delete, create buttons will be functional throughout the site	Pass	edit delete buttons
-Footer	A footer displays social information	Pass	footer
-Social links work	The social links will navigate to a new page when they're clicked. They will open in a new tab	Pass	footer
+*****
+## (TEMPLATE)
 Tools and Technologies Used:
 The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
 
