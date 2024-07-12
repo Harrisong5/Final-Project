@@ -4,7 +4,7 @@ Beet is a forum website where users can post and comment, and join different com
 
 The live application can be viewed here :
 
-[(https://beet-3a5123bf2df1.herokuapp.com/]
+https://beet-3a5123bf2df1.herokuapp.com/
 
 ## Purpose and Target Audience:
 
@@ -343,6 +343,14 @@ Final testing was done to consider larger desktop resolutions and multi-monitor 
 ### Browser Compatibility:
 
 The previous screnshots were all taken using Google Chrome. I also tested in Microsoft Edge and Mozilla Firefox.
+
+Microsoft Edge
+
+![edge](/README%20assets/snaps/MS%20edge.png)
+
+Mozilla Firefox
+
+![firefox](/README%20assets/snaps/firefox.png)
 
 
 ## Deploying
