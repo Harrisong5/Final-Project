@@ -6,25 +6,25 @@
     <form method="POST" autocomplete="off" style="text-align: center; ">
         {% csrf_token %}
         <div class="form-group">
-            <label for="{{ registerform.username.id_for_label }}"><h3 class="form-label" style="color:white;">Username:</h3></label>
+            <label for="{{ registerform.username.id_for_label }}"><h3 class="form-label" style="color:white; padding-right: 0.5rem;">Username:</h3></label>
             {{ registerform.username }}
             {{ registerform.username.errors }}
         </div>
         <br>
         <div class="form-group">
-            <label for="{{ registerform.email.id_for_label }}"><h3 class="form-label" style="color:white;">Email:</h3></label>
+            <label for="{{ registerform.email.id_for_label }}"><h3 class="form-label" style="color:white; padding-right: 0.5rem;">Email:</h3></label>
             {{ registerform.email }}
             {{ registerform.email.errors }}
         </div>
         <br>
         <div class="form-group">
-            <label for="{{ registerform.password1.id_for_label }}" ><h3 class="form-label" style="color:white;">Password:</h3></label>
+            <label for="{{ registerform.password1.id_for_label }}" ><h3 class="form-label" style="color:white; padding-right: 0.5rem;">Password:</h3></label>
             {{ registerform.password1 }}
             {{ registerform.password1.errors }}
         </div>
         <br>
         <div class="form-group">
-            <label for="{{ registerform.password2.id_for_label }}" ><h3 class="form-label" style="color:white;">Confirm Password:</h3></label>
+            <label for="{{ registerform.password2.id_for_label }}" ><h3 class="form-label" style="color:white; padding-right: 0.5rem;">Confirm Password:</h3></label>
             {{ registerform.password2 }}
             {{ registerform.password2.errors }}
         </div>

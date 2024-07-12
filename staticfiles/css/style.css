@@ -22,6 +22,9 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     outline: none;
 }
+.pagination >  li{
+    border: 0.15rem solid #7B1F4D;
+}
 .active {
     color: white;
 }
@@ -92,6 +95,14 @@ a:hover {
 
 }
 /* forms */
+.form > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form > p > label {
+    padding-right: 1rem;
+}
 label {
     color: white;
     font-size: 1.67rem;

@@ -62,14 +62,14 @@
             {% if page_obj.has_previous %}
                 <li class="btn">
                     <a class="btn" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
-                        <span aria-hidden="true" class="btn">&laquo; Previous</span>
+                        &laquo; Previous
                     </a>
                 </li>
             {% endif %}
 
             {% for num in page_obj.paginator.page_range %}
                 {% if page_obj.number == num %}
-                    <li class="btn pad"><a class="btn" href="?page={{ num }}">{{ num }}</a></li>
+                    <li class="btn"><a class="btn active" href="?page={{ num }}">{{ num }}</a></li>
                 {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
                     <li class="btn"><a class="btn" href="?page={{ num }}">{{ num }}</a></li>
                 {% endif %}

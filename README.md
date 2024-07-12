@@ -2,17 +2,22 @@
 
 Beet is a forum website where users can post and comment, and join different communities to discuss topics with like-minded others. Posts can be combined through various feeds depending on what the user wants to see.
 
-The live application can be viewed here :
+The live application can be viewed here:
 
 https://beet-3a5123bf2df1.herokuapp.com/
 
+This document will give insight into the creation process.
+
 ## Purpose and Target Audience:
 
-### Problem Statement: Traditional forums offer little flexibility in what a user can view at once. Going to individual groups and finding specific threads is often at burden for the user.
+### Problem Statement: 
+Traditional forums offer little flexibility in what a user can view at once. Going to individual groups and finding specific threads is often at burden for the user.
 
-### Purpose: Beet aims to make posts easy to find and joining communities easy. It also aims to make it easy for a user to combine their interests in a clear feed of posts that are delivered straight to them with little effort.
+### Purpose: 
+Beet aims to make posts easy to find and joining communities easy. It also aims to make it easy for a user to combine their interests in a clear feed of posts that are delivered straight to them with little effort.
 
-### Target Audience: The primary target audience are existing users of online forums, each with their own set of interests and topics, as well as non-forum users who are currently avoidant of them because it is not presented in a clean and user-friendly way.
+### Target Audience: 
+The primary target audience are existing users of online forums, each with their own set of interests and topics, as well as non-forum users who are currently avoidant of them because it is not presented in a clean and user-friendly way.
 
 ### Persona and User Stories:
 The test user has used forums in the past, and prefers the system of commenting, however uses them much less and especially finds the user experience on mobile devices off-putting.
@@ -63,8 +68,8 @@ Beet is inspired by beetroots, where digging up a post within a forum can feel l
 
 ### Mock logo
 A simplistic Beetroot icon was chosen
-https://cdn-icons-png.freepik.com/512/5668/5668408.png
-![Logo](README assets/beetroot logo.png)
+
+![Logo](/README%20assets/beetroot%20logo.png)
 
 ### Colour scheme:
 Themed around Beetroots vibrant colours as well as earthy contrasting colours, I used Coolers.co to help see some colour combinations together: https://coolors.co/7b1f4d-ac3448-ae5985-2f3702-a5c77d
@@ -86,7 +91,7 @@ Themed around Beetroots vibrant colours as well as earthy contrasting colours, I
 
 ### Font
 
-"Dosis"
+**"Dosis"** from Google Fonts
 
 A consistent font was chosen for the website that was clear to read whilst offering a softer, more nature-like look without hard edges. 
 ![Font sample](/README%20assets/font-dosis.png)
@@ -136,6 +141,7 @@ Below is a view of it on mobile, the post list can be easily scrolled down.
 
 #### Post view
 When a post title is clicked on, the post can be viewed in more detail on its own page with the comments expanded by default.
+
 ![post view](/README%20assets/snaps/post%20view.png)
 
 ### Dashboard
@@ -164,13 +170,13 @@ Minimal footer with other social media links and other details. Is easily access
 
 #### User profiles
 Access to a personalised bio and other user's pages with chosen information displayed such as post/comment history and ability to upload a profile picture. A bio section has already been implemented on the dashboard.
-### Commenting
+#### Commenting
 Ability to chain comments onto on another in replies and user's have more access to the current comments model.
-### Votes
+#### Votes
 Implement a simple upvote system, which can influence what is prioritised to be displayed on certain pages, based on an algorithm. This has been considered in the model but has not been made fully functional in terms of it's display.
-### Search function
+#### Search function
 A user can input text and search posts by content/title/author and sort by date or search for other users and profiles.
-### Video/image links
+#### Video/image links
 Attach videos and images into posts and have them embeded within the post cards for easy viewing. Fields have already been included in the Post model for this.
 
 ## Database Schema:
@@ -232,7 +238,7 @@ https://validator.w3.org/#validate_by_input
 The initial validation pulled up a few errors across all my html files. Below is a summary of the reoccuring ones.
 | Error   | Notes |
 | -------- | ------- |
-'Bad value' referencing curly braces {} |Django's syntax for its html templates, these are not used in this way for pure HTML, so these could be ignored
+'Bad value' referencing curly braces {} |Django's syntax for its html templates, these are not used in this way for pure HTML, but were necessary for function and design, so these could be ignored
 Button elements descendents of a elements|Present in my forms, this did not effect functionality
 H5 elements descendents of button elements|Present in my forms, this also did not effect functionality but was needed for stylings to work
 Doctype not seen before start tag|Due to templating this only needed to be present on my base.html
@@ -263,7 +269,7 @@ I used it to especially check my larger, more core python files such as settings
 
 ![models.py](/README%20assets/testing%20and%20validation/models%20py%20validate.png)
 
-The errors found were indentations, line lengths, line spacing and whitespace. These were easily fixed until they passed validation.
+#### The errors found were indentations, line lengths, line spacing and whitespace. These were easily fixed until they passed validation.
 
 ![python validated](/README%20assets/testing%20and%20validation/python%20pass.png)
 
@@ -310,7 +316,7 @@ After reviewing these tests, the fixes were made (notifation of more user action
 
 To test responsiveness for different screen sizes I used the developer tools within my browser to view my website at various different sizes and aspect ratios, as well as changing the size dynamically to see how the different components scaled and test any breakpoints. I tested different pages on each screen size, especially checking for body text and form size was appropriate for each. Below are example screenshots of each size.
 
-### Screen size 375 x 667 px 16:9, portrait mode(iPhone SE)
+### Screen size 375 x 667 px 16:9, portrait mode (iPhone SE)
 The navbar is collapsed in this screenshot to show post size, especially body text.
 
 ![iphone](/README%20assets/screen%20sizes/iphone%20se%20375.png)
@@ -398,7 +404,7 @@ I used several video tutorials to provide a general idea and a look into differe
 
 Logo chosen from free image website https://www.freepik.com/
 
-Colour pallette chosen using the help of https://coolors.co/
+Colour palette chosen using the help of https://coolors.co/
 
 Google fonts used to find and choose design font https://fonts.google.com/
 

@@ -5,13 +5,13 @@
     <form method="POST" autocomplete="off" style="text-align: center;">
         {% csrf_token %}
         <div class="form-group" >
-            <label for="{{ loginform.username.id_for_label }}"><h3 class="form-label" style="color:white;">Username:</h3></label>
+            <label for="{{ loginform.username.id_for_label }}"><h3 class="form-label" style="color:white; padding-right: 0.5rem;">Username:</h3></label>
             {{ loginform.username }}
             {{ loginform.username.errors }}
         </div>
         <br>
         <div class="form-group">
-            <label for="{{ loginform.password.id_for_label }}"><h3 class="form-label" style="color:white;">Password:</h3></label>
+            <label for="{{ loginform.password.id_for_label }}"><h3 class="form-label" style="color:white; padding-right: 0.5rem;">Password:</h3></label>
             {{ loginform.password }}
             {{ loginform.password.errors }}
         </div>

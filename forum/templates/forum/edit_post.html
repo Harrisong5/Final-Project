@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<form method="POST" autocomplete="off" style="text-align: center;">
+<form method="POST" autocomplete="off" style="text-align: center;" class="form">
     {% csrf_token %}
     {{ form.as_p }}
     <br>
